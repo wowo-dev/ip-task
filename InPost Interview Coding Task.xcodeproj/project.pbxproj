@@ -150,6 +150,14 @@
 			path = PackList;
 			sourceTree = "<group>";
 		};
+		8869D2542B80C44F000D2F29 /* Dependencies */ = {
+			isa = PBXGroup;
+			children = (
+				D671D9952915110C001FA9D5 /* Networking */,
+			);
+			path = Dependencies;
+			sourceTree = "<group>";
+		};
 		913D9F73B32F33C130C9E20B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -201,8 +209,8 @@
 				D671D9872913E649001FA9D5 /* App */,
 				D671D98A2913ED95001FA9D5 /* Controls */,
 				D671D98D2913F297001FA9D5 /* Model */,
-				D671D9952915110C001FA9D5 /* Networking */,
 				D671D9892913E685001FA9D5 /* Screen */,
+				8869D2542B80C44F000D2F29 /* Dependencies */,
 				D671D9652913E529001FA9D5 /* Info.plist */,
 			);
 			path = "InPost Interview Coding Task";
