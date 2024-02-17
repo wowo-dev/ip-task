@@ -22,13 +22,3 @@ final class PackListViewModel {
         }
     }
 }
-
-private extension PackNetworking {
-    func getPacks() async throws -> [Pack] {
-        try await withCheckedThrowingContinuation { continuation in
-            getPacks { result in
-                continuation.resume(with: result)
-            }
-        }
-    }
-}

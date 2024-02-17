@@ -8,18 +8,16 @@
 import Foundation
 
 class PackNetworking {
-    
     private let jsonDecoder: JSONDecoder = {
         let decoder = JSONDecoder()
         decoder.dateDecodingStrategy = .iso8601
         return decoder
     }()
-    
-    func getPacks(completion: @escaping (Result<[Pack], Error>) -> Void) {
+
+    func getPacks() async throws -> [Pack] {
         let url = Bundle.main.url(forResource: "packs", withExtension: "json")!
-        let data = try! Data(contentsOf: url)
-        let result = try! jsonDecoder.decode([Pack].self, from: data)
-        completion(.success(result))
+        let data = try Data(contentsOf: url)
+        let result = try jsonDecoder.decode([Pack].self, from: data)
+        return result
     }
-    
 }
