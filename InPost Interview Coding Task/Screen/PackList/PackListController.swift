@@ -10,7 +10,8 @@ import Combine
 
 class PackListController: UIViewController {
     private let tableView = UITableView(frame: .zero, style: .grouped)
-    
+    private let refreshControl = UIRefreshControl()
+
     private let viewModel = PackListViewModel()
     private var packs = [Pack]()
     private var subscribers = Set<AnyCancellable>()
@@ -28,8 +29,8 @@ class PackListController: UIViewController {
 private extension PackListController {
     func setupView() {
         view.backgroundColor = .listBackground
-
         setupTableView()
+        setupRefreshControl()
     }
 
     func setupTableView() {
@@ -48,9 +49,14 @@ private extension PackListController {
         tableView.allowsSelection = false
         tableView.dataSource = self
         tableView.delegate = self
+        tableView.refreshControl = refreshControl
 
         tableView.register(cell: PackCell.self)
         tableView.register(headerFooter: PackHeader.self)
+    }
+
+    func setupRefreshControl() {
+        refreshControl.addTarget(self, action: #selector(loadPacks), for: .valueChanged)
     }
 }
 
@@ -58,10 +64,10 @@ private extension PackListController {
 private extension PackListController {
     func setupBindings() {
         viewModel.$sections
-            .dropFirst()
             .receive(on: DispatchQueue.main)
             .sink { [weak self] _ in
                 self?.tableView.reloadData()
+                self?.refreshControl.endRefreshing()
             }
             .store(in: &subscribers)
     }
@@ -69,6 +75,7 @@ private extension PackListController {
 
 // MARK: - Actions
 private extension PackListController {
+    @objc
     func loadPacks() {
         viewModel.fetchPacks()
     }
