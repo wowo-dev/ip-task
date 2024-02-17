@@ -18,7 +18,7 @@ class PackListController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.title = "Lista przesyłek"
+        navigationItem.title = "pack_list_title".localized
         setupView()
         setupBindings()
         loadPacks()

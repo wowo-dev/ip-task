@@ -63,9 +63,9 @@ class PackView: UIView {
     }
     
     private func setupTexts() {
-        numberTitleLabel.attributedText = .init(text: "NR PRZESYŁKI", style: .overline)
-        statusTitleLabel.attributedText = .init(text: "STATUS", style: .overline)
-        senderTitleLabel.attributedText = .init(text: "NADAWCA", style: .overline)
-        moreLabel.attributedText = .init(text: "więcej", style: .button)
+        numberTitleLabel.attributedText = .init(text: "pack_view_title_number".localized, style: .overline)
+        statusTitleLabel.attributedText = .init(text: "pack_view_title_status".localized, style: .overline)
+        senderTitleLabel.attributedText = .init(text: "pack_view_title_sender".localized, style: .overline)
+        moreLabel.attributedText = .init(text: "pack_view_label_more".localized, style: .button)
     }
 }

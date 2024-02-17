@@ -1,0 +1,251 @@
+{
+  "sourceLanguage" : "pl",
+  "strings" : {
+    "Key" : {
+      "extractionState" : "manual"
+    },
+    "pack_group_in_delivery" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gotowe do odbioru"
+          }
+        }
+      }
+    },
+    "pack_group_other" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pozostałe"
+          }
+        }
+      }
+    },
+    "pack_list_title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lista przesyłek"
+          }
+        }
+      }
+    },
+    "pack_status_adopted_branch" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Przyjęta w oddziale"
+          }
+        }
+      }
+    },
+    "pack_status_adopted_center" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Przyjęta w sortowni"
+          }
+        }
+      }
+    },
+    "pack_status_avizo" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Awizo"
+          }
+        }
+      }
+    },
+    "pack_status_confirmed" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nadana"
+          }
+        }
+      }
+    },
+    "pack_status_created" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "W trakcie przygotowania"
+          }
+        }
+      }
+    },
+    "pack_status_delivered" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Odebrana"
+          }
+        }
+      }
+    },
+    "pack_status_for_delivery" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wydana do doręczenia"
+          }
+        }
+      }
+    },
+    "pack_status_other" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Inny"
+          }
+        }
+      }
+    },
+    "pack_status_pickup_expired" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Upłynął termin odbioru"
+          }
+        }
+      }
+    },
+    "pack_status_ready_to_pickup" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gotowa do odbioru"
+          }
+        }
+      }
+    },
+    "pack_status_returned_to_sender" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zwrócona do nadawcy"
+          }
+        }
+      }
+    },
+    "pack_status_sent_branch" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wysłana z oddziału"
+          }
+        }
+      }
+    },
+    "pack_status_sent_center" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wysłana z sortowni"
+          }
+        }
+      }
+    },
+    "pack_view_label_more" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "więcej"
+          }
+        }
+      }
+    },
+    "pack_view_title_date_delivered" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ODEBRANA"
+          }
+        }
+      }
+    },
+    "pack_view_title_date_ready_to_pickup" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "CZEKA NA ODBIÓR DO"
+          }
+        }
+      }
+    },
+    "pack_view_title_number" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "NR PRZESYŁKI"
+          }
+        }
+      }
+    },
+    "pack_view_title_sender" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "NADAWCA"
+          }
+        }
+      }
+    },
+    "pack_view_title_status" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "STATUS"
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}

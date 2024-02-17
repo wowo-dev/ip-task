@@ -18,8 +18,8 @@ enum PackGroup: CaseIterable {
 
     var title: String {
         switch self {
-        case .inDelivery: "Gotowe do odbioru"
-        case .other: "Pozostałe"
+        case .inDelivery: "pack_group_in_delivery".localized
+        case .other: "pack_group_other".localized
         }
     }
 
