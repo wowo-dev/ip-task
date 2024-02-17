@@ -43,6 +43,7 @@
 		8869D28B2B810C2A000D2F29 /* TableViewHeaderFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8869D28A2B810C2A000D2F29 /* TableViewHeaderFooter.swift */; };
 		8869D28D2B810C4F000D2F29 /* UITableView+Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8869D28C2B810C4F000D2F29 /* UITableView+Register.swift */; };
 		8869D28F2B810C76000D2F29 /* UITableView+Dequeue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8869D28E2B810C76000D2F29 /* UITableView+Dequeue.swift */; };
+		889FE7322B81272300C84EB0 /* UIActivityIndicatorView+SetAnimating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889FE7312B81272300C84EB0 /* UIActivityIndicatorView+SetAnimating.swift */; };
 		D671D9582913E528001FA9D5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D671D9572913E528001FA9D5 /* AppDelegate.swift */; };
 		D671D95C2913E528001FA9D5 /* PackListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D671D95B2913E528001FA9D5 /* PackListController.swift */; };
 		D671D95F2913E528001FA9D5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D671D95D2913E528001FA9D5 /* Main.storyboard */; };
@@ -117,6 +118,7 @@
 		8869D28A2B810C2A000D2F29 /* TableViewHeaderFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewHeaderFooter.swift; sourceTree = "<group>"; };
 		8869D28C2B810C4F000D2F29 /* UITableView+Register.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Register.swift"; sourceTree = "<group>"; };
 		8869D28E2B810C76000D2F29 /* UITableView+Dequeue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Dequeue.swift"; sourceTree = "<group>"; };
+		889FE7312B81272300C84EB0 /* UIActivityIndicatorView+SetAnimating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIActivityIndicatorView+SetAnimating.swift"; sourceTree = "<group>"; };
 		96F920E0E0807B41F317A8DF /* Pods-InPost Interview Coding TaskTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InPost Interview Coding TaskTests.debug.xcconfig"; path = "Target Support Files/Pods-InPost Interview Coding TaskTests/Pods-InPost Interview Coding TaskTests.debug.xcconfig"; sourceTree = "<group>"; };
 		9D61EABD2778CE163139EDFE /* Pods_InPost_Interview_Coding_Task.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InPost_Interview_Coding_Task.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D671D9542913E528001FA9D5 /* InPost Interview Coding Task.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "InPost Interview Coding Task.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -208,6 +210,7 @@
 				8869D2812B80FCCF000D2F29 /* NSAttributedString+TextStyle.swift */,
 				8869D2832B8109A9000D2F29 /* String+Ranges.swift */,
 				8819B3AC2B811A330040CD08 /* String+Localizable.swift */,
+				889FE7312B81272300C84EB0 /* UIActivityIndicatorView+SetAnimating.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -688,6 +691,7 @@
 				8869D2892B810BFE000D2F29 /* TableViewItem.swift in Sources */,
 				8869D2482B80B6D0000D2F29 /* Pack+Status.swift in Sources */,
 				8869D2582B80C60C000D2F29 /* PackNetworking.swift in Sources */,
+				889FE7322B81272300C84EB0 /* UIActivityIndicatorView+SetAnimating.swift in Sources */,
 				8869D23E2B80AC9D000D2F29 /* View+Anchors.swift in Sources */,
 				8869D27E2B80FB50000D2F29 /* UIFont+Typography.swift in Sources */,
 				8869D2872B810B9B000D2F29 /* PackHeader.swift in Sources */,

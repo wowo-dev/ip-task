@@ -26,6 +26,17 @@
         }
       }
     },
+    "pack_list_empty_title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nie śledzisz jeszcze żadnej przesyłki"
+          }
+        }
+      }
+    },
     "pack_list_title" : {
       "extractionState" : "manual",
       "localizations" : {

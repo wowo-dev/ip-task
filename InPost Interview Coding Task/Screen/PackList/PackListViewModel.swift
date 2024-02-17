@@ -20,6 +20,13 @@ final class PackListViewModel {
         Task {
             do {
                 let packs = try await packNetworking.getPacks()
+
+                guard !packs.isEmpty else {
+                    sections = []
+                    state = .empty
+                    return
+                }
+
                 sections = createSections(from: packs)
                 state = .list
             } catch {

@@ -10,6 +10,7 @@ import Foundation
 enum PackListState {
     case loading
     case list
+    case empty
 }
 
 struct PackListSection {

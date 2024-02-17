@@ -12,6 +12,7 @@ class PackListController: UIViewController {
     private let tableView = UITableView(frame: .zero, style: .grouped)
     private let refreshControl = UIRefreshControl()
     private let activityIndicator = UIActivityIndicatorView(style: .large)
+    private let emptyStateView = UIView()
 
     private let viewModel = PackListViewModel()
     private var packs = [Pack]()
@@ -32,7 +33,8 @@ private extension PackListController {
         view.backgroundColor = .listBackground
         setupTableView()
         setupRefreshControl()
-        setupActivitiIndicator()
+        setupActivityIndicator()
+        setupEmptyStateView()
     }
 
     func setupTableView() {
@@ -61,7 +63,7 @@ private extension PackListController {
         refreshControl.addTarget(self, action: #selector(loadPacks), for: .valueChanged)
     }
 
-    func setupActivitiIndicator() {
+    func setupActivityIndicator() {
         view.addSubview(activityIndicator)
         activityIndicator.hidesWhenStopped = true
         activityIndicator.activate(
@@ -70,14 +72,32 @@ private extension PackListController {
         )
     }
 
-    func setState(_ state: PackListState) {
-        switch state {
-        case .loading:
-            activityIndicator.startAnimating()
-        case .list:
-            activityIndicator.stopAnimating()
-        }
+    func setupEmptyStateView() {
+        emptyStateView.backgroundColor = .commonBackground
+        view.addSubview(emptyStateView)
+        emptyStateView.activate(
+            emptyStateView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
+            emptyStateView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -20),
+            emptyStateView.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.75)
+        )
+
+        let emptyStateLabel = UILabel()
+        emptyStateLabel.numberOfLines = 0
+        emptyStateLabel.attributedText = .init(text: "pack_list_empty_title".localized, style: .headline)
+
+        emptyStateView.addSubview(emptyStateLabel)
+        emptyStateLabel.activate(
+            emptyStateLabel.topAnchor.constraint(equalTo: emptyStateView.topAnchor, constant: 32),
+            emptyStateLabel.bottomAnchor.constraint(equalTo: emptyStateView.bottomAnchor, constant: -32),
+            emptyStateLabel.leadingAnchor.constraint(equalTo: emptyStateView.leadingAnchor, constant: 16),
+            emptyStateLabel.trailingAnchor.constraint(equalTo: emptyStateView.trailingAnchor, constant: -16)
+        )
     }
+
+    func setState(_ state: PackListState) {
+        activityIndicator.setAnimating(state == .loading)
+        emptyStateView.isHidden = state != .empty
+    }    
 }
 
 // MARK: - Bindings setup
