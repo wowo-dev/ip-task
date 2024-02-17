@@ -9,7 +9,7 @@ import Combine
 import OrderedCollections
 
 final class PackListViewModel {
-    private let packNetworking = PackNetworking()
+    private let packNetworking = PackNetworkingImpl()
 
     @Published private(set) var sections = [PackListSection]()
 

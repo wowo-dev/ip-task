@@ -27,7 +27,7 @@
 		D671D98F2913F2A1001FA9D5 /* Pack.swift in Sources */ = {isa = PBXBuildFile; fileRef = D671D98E2913F2A1001FA9D5 /* Pack.swift */; };
 		D671D9912913F79B001FA9D5 /* PackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D671D9902913F79B001FA9D5 /* PackView.swift */; };
 		D671D9942913F82E001FA9D5 /* PackView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D671D9932913F82E001FA9D5 /* PackView.xib */; };
-		D671D9972915111C001FA9D5 /* PackNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = D671D9962915111C001FA9D5 /* PackNetworking.swift */; };
+		D671D9972915111C001FA9D5 /* PackNetworkingImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D671D9962915111C001FA9D5 /* PackNetworkingImpl.swift */; };
 		D671D99E2915139F001FA9D5 /* packs.json in Resources */ = {isa = PBXBuildFile; fileRef = D671D99D2915139F001FA9D5 /* packs.json */; };
 		E9D6834053AC34681B44D9F7 /* Pods_InPost_Interview_Coding_Task.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D61EABD2778CE163139EDFE /* Pods_InPost_Interview_Coding_Task.framework */; };
 		F06EF28DEDF5FA9A19B77F9F /* Pods_InPost_Interview_Coding_Task_InPost_Interview_Coding_TaskUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 871FC296EE090F4634A2C236 /* Pods_InPost_Interview_Coding_Task_InPost_Interview_Coding_TaskUITests.framework */; };
@@ -79,7 +79,7 @@
 		D671D98E2913F2A1001FA9D5 /* Pack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pack.swift; sourceTree = "<group>"; };
 		D671D9902913F79B001FA9D5 /* PackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackView.swift; sourceTree = "<group>"; };
 		D671D9932913F82E001FA9D5 /* PackView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PackView.xib; sourceTree = "<group>"; };
-		D671D9962915111C001FA9D5 /* PackNetworking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackNetworking.swift; sourceTree = "<group>"; };
+		D671D9962915111C001FA9D5 /* PackNetworkingImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackNetworkingImpl.swift; sourceTree = "<group>"; };
 		D671D99D2915139F001FA9D5 /* packs.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = packs.json; sourceTree = "<group>"; };
 		E9D6C720825E15C8DB9CDFC0 /* Pods_InPost_Interview_Coding_TaskTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InPost_Interview_Coding_TaskTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE0ADA89C9F6B8ABEECD7623 /* Pods-InPost Interview Coding Task-InPost Interview Coding TaskUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InPost Interview Coding Task-InPost Interview Coding TaskUITests.release.xcconfig"; path = "Target Support Files/Pods-InPost Interview Coding Task-InPost Interview Coding TaskUITests/Pods-InPost Interview Coding Task-InPost Interview Coding TaskUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -282,7 +282,7 @@
 		D671D9952915110C001FA9D5 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				D671D9962915111C001FA9D5 /* PackNetworking.swift */,
+				D671D9962915111C001FA9D5 /* PackNetworkingImpl.swift */,
 				8869D2492B80B8E0000D2F29 /* OptionalElement.swift */,
 				D671D99929151360001FA9D5 /* Mock */,
 			);
@@ -549,7 +549,7 @@
 				8869D2422B80AE1D000D2F29 /* PackCell.swift in Sources */,
 				8869D2482B80B6D0000D2F29 /* Pack+Status.swift in Sources */,
 				8869D23E2B80AC9D000D2F29 /* View+Anchors.swift in Sources */,
-				D671D9972915111C001FA9D5 /* PackNetworking.swift in Sources */,
+				D671D9972915111C001FA9D5 /* PackNetworkingImpl.swift in Sources */,
 				8869D2462B80B18F000D2F29 /* PackListViewModel.swift in Sources */,
 				D671D98F2913F2A1001FA9D5 /* Pack.swift in Sources */,
 				8869D2442B80AE78000D2F29 /* TableViewCell.swift in Sources */,

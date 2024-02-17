@@ -1,5 +1,5 @@
 //
-//  PackNetworking.swift
+//  PackNetworkingImpl.swift
 //  InPost Interview Coding Task
 //
 //  Created by Damian Piwowarski on 04/11/2022.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-class PackNetworking {
+class PackNetworkingImpl {
     private let jsonDecoder: JSONDecoder = {
         let decoder = JSONDecoder()
         decoder.dateDecodingStrategy = .iso8601
