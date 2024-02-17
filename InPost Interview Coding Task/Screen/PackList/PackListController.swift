@@ -27,6 +27,8 @@ class PackListController: UIViewController {
 // MARK: - View setup
 private extension PackListController {
     func setupView() {
+        view.backgroundColor = .listBackground
+
         setupTableView()
     }
 
@@ -91,7 +93,7 @@ extension PackListController: UITableViewDataSource {
         
         let packs = viewModel.sections[indexPath.section].packs
         let model = packs[indexPath.row]
-        packCell.setup(model: model)
+        packCell.setup(model: model, isLast: indexPath.row == packs.count - 1)
 
         return packCell
     }
@@ -107,5 +109,13 @@ extension PackListController: UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         48
+    }
+
+    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        return UIView(frame: .zero)
+    }
+
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        .leastNonzeroMagnitude
     }
 }

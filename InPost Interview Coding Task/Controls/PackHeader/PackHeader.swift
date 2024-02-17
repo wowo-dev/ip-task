@@ -24,9 +24,9 @@ class PackHeader: UITableViewHeaderFooterView, TableViewHeaderFooter {
 private extension PackHeader {
     private func setupView() {
         let leadingDivider = UIView()
-        leadingDivider.backgroundColor = .init(.divider)
+        leadingDivider.backgroundColor = .divider
         let trailingDivider = UIView()
-        trailingDivider.backgroundColor = .init(.divider)
+        trailingDivider.backgroundColor = .divider
 
         [leadingDivider, titleLabel, trailingDivider].forEach {
             addSubview($0)

@@ -55,6 +55,7 @@ class PackView: UIView {
     
     private func setupContainerStyle() {
         // TODO: Look out for shadow performance?
+        contentContainer.backgroundColor = .commonBackground
         contentContainer.layer.shadowColor = UIColor.black.cgColor
         contentContainer.layer.shadowRadius = 5
         contentContainer.layer.shadowOffset = .init(width: 0, height: 5)

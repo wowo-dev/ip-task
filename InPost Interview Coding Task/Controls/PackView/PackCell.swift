@@ -9,6 +9,7 @@ import UIKit
 
 class PackCell: UITableViewCell, TableViewCell {
     private let packView = PackView()
+    private var bottomConstraint: NSLayoutConstraint?
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -20,8 +21,10 @@ class PackCell: UITableViewCell, TableViewCell {
         setup()
     }
 
-    func setup(model: PackView.Model) {
+    func setup(model: PackView.Model, isLast: Bool) {
         packView.setup(model: model)
+        print(model.sender, "isLast:", isLast)
+        bottomConstraint?.constant = isLast ? 0 : -16
     }
 }
 
@@ -31,11 +34,14 @@ private extension PackCell {
         contentView.backgroundColor = .clear
         contentView.addSubview(packView)
 
+        let bottomConstraint = packView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor)
         packView.activate(
             packView.topAnchor.constraint(equalTo: contentView.topAnchor),
-            packView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -16),
+            bottomConstraint,
             packView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
             packView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor)
         )
+
+        self.bottomConstraint = bottomConstraint
     }
 }
