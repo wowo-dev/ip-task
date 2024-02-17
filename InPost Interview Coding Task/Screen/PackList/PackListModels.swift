@@ -7,6 +7,11 @@
 
 import Foundation
 
+enum PackListState {
+    case loading
+    case list
+}
+
 struct PackListSection {
     let title: String
     let packs: [PackView.Model]

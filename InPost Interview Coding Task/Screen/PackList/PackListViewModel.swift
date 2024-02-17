@@ -12,6 +12,8 @@ import Factory
 final class PackListViewModel {
     @Injected(\.packNetworking) var packNetworking
     @Injected(\.packModelMapper) var packMapper
+
+    @Published private(set) var state = PackListState.loading
     @Published private(set) var sections = [PackListSection]()
 
     func fetchPacks() {
@@ -19,6 +21,7 @@ final class PackListViewModel {
             do {
                 let packs = try await packNetworking.getPacks()
                 sections = createSections(from: packs)
+                state = .list
             } catch {
                 sections = []
             }

@@ -11,6 +11,7 @@ import Combine
 class PackListController: UIViewController {
     private let tableView = UITableView(frame: .zero, style: .grouped)
     private let refreshControl = UIRefreshControl()
+    private let activityIndicator = UIActivityIndicatorView(style: .large)
 
     private let viewModel = PackListViewModel()
     private var packs = [Pack]()
@@ -31,6 +32,7 @@ private extension PackListController {
         view.backgroundColor = .listBackground
         setupTableView()
         setupRefreshControl()
+        setupActivitiIndicator()
     }
 
     func setupTableView() {
@@ -58,12 +60,38 @@ private extension PackListController {
     func setupRefreshControl() {
         refreshControl.addTarget(self, action: #selector(loadPacks), for: .valueChanged)
     }
+
+    func setupActivitiIndicator() {
+        view.addSubview(activityIndicator)
+        activityIndicator.hidesWhenStopped = true
+        activityIndicator.activate(
+            activityIndicator.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            activityIndicator.centerYAnchor.constraint(equalTo: view.centerYAnchor)
+        )
+    }
+
+    func setState(_ state: PackListState) {
+        switch state {
+        case .loading:
+            activityIndicator.startAnimating()
+        case .list:
+            activityIndicator.stopAnimating()
+        }
+    }
 }
 
 // MARK: - Bindings setup
 private extension PackListController {
     func setupBindings() {
+        viewModel.$state
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] state in
+                self?.setState(state)
+            }
+            .store(in: &subscribers)
+
         viewModel.$sections
+            .dropFirst()
             .receive(on: DispatchQueue.main)
             .sink { [weak self] _ in
                 self?.tableView.reloadData()
