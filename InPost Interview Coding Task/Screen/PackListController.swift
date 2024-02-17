@@ -9,7 +9,8 @@ import UIKit
 
 class PackListController: UIViewController {
     private let tableView = UITableView(frame: .zero, style: .grouped)
-    private let packNetworking = PackNetworking()
+    
+    private let viewModel = PackListViewModel()
     private var packs = [Pack]()
 
     override func viewDidLoad() {
@@ -48,15 +49,7 @@ private extension PackListController {
 // MARK: - Actions
 private extension PackListController {
     private func loadPacks() {
-        packNetworking.getPacks { [weak self] result in
-            if case .success(let packs) = result {
-                self?.packs = packs
-            } else {
-                self?.packs = []
-            }
-
-            self?.tableView.reloadData()
-        }
+        viewModel.fetchPacks()
     }
 }
 
@@ -67,14 +60,14 @@ extension PackListController: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        packs.count
+        viewModel.packs.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: PackCell.reuseIdentifier, for: indexPath)
 
         if let packCell = cell as? PackCell {
-            packCell.set(pack: packs[indexPath.row])
+            packCell.set(pack: viewModel.packs[indexPath.row])
         }
 
         return cell
