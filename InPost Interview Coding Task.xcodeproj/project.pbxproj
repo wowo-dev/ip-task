@@ -23,10 +23,11 @@
 		8869D25E2B80CEC0000D2F29 /* Pack+ShipmentType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8869D25D2B80CEC0000D2F29 /* Pack+ShipmentType.swift */; };
 		8869D2622B80D101000D2F29 /* PackModelMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8869D2612B80D101000D2F29 /* PackModelMapper.swift */; };
 		8869D2642B80D107000D2F29 /* PackModelMapperImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8869D2632B80D107000D2F29 /* PackModelMapperImpl.swift */; };
+		8869D2692B80DAE5000D2F29 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8869D2682B80DAE5000D2F29 /* Images.xcassets */; };
 		D671D9582913E528001FA9D5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D671D9572913E528001FA9D5 /* AppDelegate.swift */; };
 		D671D95C2913E528001FA9D5 /* PackListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D671D95B2913E528001FA9D5 /* PackListController.swift */; };
 		D671D95F2913E528001FA9D5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D671D95D2913E528001FA9D5 /* Main.storyboard */; };
-		D671D9612913E529001FA9D5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D671D9602913E529001FA9D5 /* Assets.xcassets */; };
+		D671D9612913E529001FA9D5 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D671D9602913E529001FA9D5 /* Colors.xcassets */; };
 		D671D9642913E529001FA9D5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D671D9622913E529001FA9D5 /* LaunchScreen.storyboard */; };
 		D671D96F2913E529001FA9D5 /* InPostTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D671D96E2913E529001FA9D5 /* InPostTests.swift */; };
 		D671D98C2913EDA4001FA9D5 /* IPNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D671D98B2913EDA4001FA9D5 /* IPNavigationController.swift */; };
@@ -75,13 +76,14 @@
 		8869D25D2B80CEC0000D2F29 /* Pack+ShipmentType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Pack+ShipmentType.swift"; sourceTree = "<group>"; };
 		8869D2612B80D101000D2F29 /* PackModelMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackModelMapper.swift; sourceTree = "<group>"; };
 		8869D2632B80D107000D2F29 /* PackModelMapperImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackModelMapperImpl.swift; sourceTree = "<group>"; };
+		8869D2682B80DAE5000D2F29 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		96F920E0E0807B41F317A8DF /* Pods-InPost Interview Coding TaskTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InPost Interview Coding TaskTests.debug.xcconfig"; path = "Target Support Files/Pods-InPost Interview Coding TaskTests/Pods-InPost Interview Coding TaskTests.debug.xcconfig"; sourceTree = "<group>"; };
 		9D61EABD2778CE163139EDFE /* Pods_InPost_Interview_Coding_Task.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InPost_Interview_Coding_Task.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D671D9542913E528001FA9D5 /* InPost Interview Coding Task.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "InPost Interview Coding Task.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D671D9572913E528001FA9D5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D671D95B2913E528001FA9D5 /* PackListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackListController.swift; sourceTree = "<group>"; };
 		D671D95E2913E528001FA9D5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		D671D9602913E529001FA9D5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D671D9602913E529001FA9D5 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		D671D9632913E529001FA9D5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D671D9652913E529001FA9D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D671D96A2913E529001FA9D5 /* InPost Interview Coding TaskTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "InPost Interview Coding TaskTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -267,7 +269,8 @@
 		D671D9882913E677001FA9D5 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
-				D671D9602913E529001FA9D5 /* Assets.xcassets */,
+				D671D9602913E529001FA9D5 /* Colors.xcassets */,
+				8869D2682B80DAE5000D2F29 /* Images.xcassets */,
 				D671D95D2913E528001FA9D5 /* Main.storyboard */,
 				D671D9622913E529001FA9D5 /* LaunchScreen.storyboard */,
 			);
@@ -450,7 +453,8 @@
 			files = (
 				D671D9642913E529001FA9D5 /* LaunchScreen.storyboard in Resources */,
 				D671D99E2915139F001FA9D5 /* packs.json in Resources */,
-				D671D9612913E529001FA9D5 /* Assets.xcassets in Resources */,
+				D671D9612913E529001FA9D5 /* Colors.xcassets in Resources */,
+				8869D2692B80DAE5000D2F29 /* Images.xcassets in Resources */,
 				D671D95F2913E528001FA9D5 /* Main.storyboard in Resources */,
 				D671D9942913F82E001FA9D5 /* PackView.xib in Resources */,
 			);

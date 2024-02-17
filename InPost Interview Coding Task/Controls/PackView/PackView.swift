@@ -21,7 +21,8 @@ class PackView: UIView {
     @IBOutlet private var dateLabel: UILabel!
     @IBOutlet private var senderTitleLabel: UILabel!
     @IBOutlet private var senderLabel: UILabel!
-    
+    @IBOutlet private var moreLabel: UILabel!
+
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupView()
@@ -66,6 +67,6 @@ class PackView: UIView {
         numberTitleLabel.text = "NR PRZESYŁKI"
         statusTitleLabel.text = "STATUS"
         senderTitleLabel.text = "NADAWCA"
+        moreLabel.text = "więcej"
     }
-    
 }
