@@ -8,40 +8,42 @@
 import UIKit
 
 class PackListController: UIViewController {
-
-    @IBOutlet private var stackView: UIStackView!
-    
+    private let tableView = UITableView(frame: .zero, style: .grouped)
     private let packNetworking = PackNetworking()
-    
+    private var packs = [Pack]()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = "Lista przesyłek"
-        
+        setupView()
         loadPacks()
     }
-    
+}
+
+// MARK: - View setup
+private extension PackListController {
+    func setupView() {
+        setupTableView()
+    }
+
+    func setupTableView() {
+        view.addSubview(tableView)
+        tableView.activate(
+            tableView.topAnchor.constraint(equalTo: view.topAnchor),
+            tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor)
+        )
+    }
+}
+
+// MARK: - Actions
+private extension PackListController {
     private func loadPacks() {
-        packNetworking.getPacks { result in
-            self.removePacks()
-            
+        packNetworking.getPacks { [weak self] result in
             if case .success(let packs) = result {
-                packs.forEach { pack in
-                    self.addPackView(pack)
-                }
+                self?.packs = packs
             }
         }
     }
-    
-    private func removePacks() {
-        stackView.arrangedSubviews.forEach { subview in
-            subview.removeFromSuperview()
-        }
-    }
-    
-    private func addPackView(_ pack: Pack) {
-        let packView = PackView()
-        packView.setup(pack: pack)
-        stackView.addArrangedSubview(packView)
-    }
-
 }
