@@ -92,4 +92,8 @@ extension PackListController: UITableViewDataSource {
 
         return packCell
     }
+
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        viewModel.sections[section].title
+    }
 }
