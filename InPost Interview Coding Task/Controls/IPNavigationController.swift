@@ -8,7 +8,6 @@
 import UIKit
 
 class IPNavigationController: UINavigationController {
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNavigationBar()
@@ -17,16 +16,18 @@ class IPNavigationController: UINavigationController {
     private func setupNavigationBar() {
         let appearance = UINavigationBarAppearance()
         appearance.backgroundEffect = nil
-        appearance.backgroundColor = .systemBackground
+        appearance.backgroundColor = .commonBackground
         appearance.shadowImage = UIImage()
         appearance.shadowColor = .clear
+
+        let typography = Typography.headline
         appearance.titleTextAttributes = [
-            .foregroundColor: UIColor.black,
-            .font: UIFont.systemFont(ofSize: 15, weight: .bold)
+            .foregroundColor: UIColor.text,
+            .kern: typography.kern
         ]
-        
+        appearance.titleTextAttributes[.font] = UIFont(typography: typography)
+
         navigationBar.standardAppearance = appearance
         navigationBar.scrollEdgeAppearance = appearance
     }
-    
 }
