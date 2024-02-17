@@ -8,9 +8,10 @@
 import UIKit
 
 extension NSAttributedString {
-    convenience init(text: String, style: TextStyle) {
+    convenience init(text: String, style: TextStyle, alignment: NSTextAlignment = .natural) {
         let paragraphStyle = NSMutableParagraphStyle()
         paragraphStyle.lineSpacing = style.typography.lineSpacing
+        paragraphStyle.alignment = alignment
 
         var attributes: [NSAttributedString.Key: Any] = [
             .foregroundColor: style.color,

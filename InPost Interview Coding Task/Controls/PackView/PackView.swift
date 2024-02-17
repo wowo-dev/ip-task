@@ -8,9 +8,7 @@
 import UIKit
 
 class PackView: UIView {
-    
     @IBOutlet private var contentView: UIView!
-    
     @IBOutlet private var contentContainer: UIView!
     @IBOutlet private var numberTitleLabel: UILabel!
     @IBOutlet private var numberLabel: UILabel!
@@ -34,11 +32,11 @@ class PackView: UIView {
     }
     
     func setup(model: Model) {
-        numberLabel.text = model.id
-        statusLabel.text = model.status
-        senderLabel.text = model.sender
-        dateTitleLabel.text = model.dateTitle
-        dateLabel.text = model.date
+        numberLabel.attributedText = .init(text: model.id, style: .subheadline)
+        statusLabel.attributedText = .init(text: model.status, style: .headline)
+        senderLabel.attributedText = .init(text: model.sender, style: .headline)
+        dateTitleLabel.attributedText = .init(text: model.dateTitle ?? "", style: .overline, alignment: .right)
+        dateLabel.attributedText = .init(text: model.date ?? "", style: .subheadline, alignment: .right)
         shipmentTypeImage.image = UIImage(named: model.shipmentIconName)
     }
     
@@ -64,9 +62,9 @@ class PackView: UIView {
     }
     
     private func setupTexts() {
-        numberTitleLabel.text = "NR PRZESYŁKI"
-        statusTitleLabel.text = "STATUS"
-        senderTitleLabel.text = "NADAWCA"
-        moreLabel.text = "więcej"
+        numberTitleLabel.attributedText = .init(text: "NR PRZESYŁKI", style: .overline)
+        statusTitleLabel.attributedText = .init(text: "STATUS", style: .overline)
+        senderTitleLabel.attributedText = .init(text: "NADAWCA", style: .overline)
+        moreLabel.attributedText = .init(text: "więcej", style: .button)
     }
 }
