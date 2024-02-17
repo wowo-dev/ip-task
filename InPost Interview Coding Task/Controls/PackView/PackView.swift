@@ -31,7 +31,7 @@ class PackView: UIView {
     
     func setup(pack: Pack) {
         numberLabel.text = pack.id
-        statusLabel.text = pack.status
+        statusLabel.text = pack.status.rawValue
         senderLabel.text = pack.sender
     }
     

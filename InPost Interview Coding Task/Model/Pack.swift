@@ -9,7 +9,7 @@ import Foundation
 
 struct Pack: Codable {
     let id: String
-    let status: String
+    let status: Status
     let sender: String
     let expiryDate: Date?
     let pickupDate: Date?
