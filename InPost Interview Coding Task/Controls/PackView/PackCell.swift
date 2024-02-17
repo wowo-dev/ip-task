@@ -33,7 +33,7 @@ private extension PackCell {
 
         packView.activate(
             packView.topAnchor.constraint(equalTo: contentView.topAnchor),
-            packView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
+            packView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -16),
             packView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
             packView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor)
         )

@@ -67,8 +67,8 @@ private extension Pack.Status {
 private extension Pack.ShipmentType {
     var iconName: String {
         switch self {
-        case .parcelLocker: ""
-        case .courier: ""
+        case .parcelLocker: "shipment_parcel_locker"
+        case .courier: "shipment_courier"
         }
     }
 }
