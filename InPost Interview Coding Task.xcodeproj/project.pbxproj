@@ -21,6 +21,8 @@
 		8869D25A2B80C671000D2F29 /* Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8869D2592B80C671000D2F29 /* Container.swift */; };
 		8869D25C2B80CE3D000D2F29 /* PackView+Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8869D25B2B80CE3D000D2F29 /* PackView+Model.swift */; };
 		8869D25E2B80CEC0000D2F29 /* Pack+ShipmentType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8869D25D2B80CEC0000D2F29 /* Pack+ShipmentType.swift */; };
+		8869D2622B80D101000D2F29 /* PackModelMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8869D2612B80D101000D2F29 /* PackModelMapper.swift */; };
+		8869D2642B80D107000D2F29 /* PackModelMapperImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8869D2632B80D107000D2F29 /* PackModelMapperImpl.swift */; };
 		D671D9582913E528001FA9D5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D671D9572913E528001FA9D5 /* AppDelegate.swift */; };
 		D671D95C2913E528001FA9D5 /* PackListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D671D95B2913E528001FA9D5 /* PackListController.swift */; };
 		D671D95F2913E528001FA9D5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D671D95D2913E528001FA9D5 /* Main.storyboard */; };
@@ -71,6 +73,8 @@
 		8869D2592B80C671000D2F29 /* Container.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Container.swift; sourceTree = "<group>"; };
 		8869D25B2B80CE3D000D2F29 /* PackView+Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PackView+Model.swift"; sourceTree = "<group>"; };
 		8869D25D2B80CEC0000D2F29 /* Pack+ShipmentType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Pack+ShipmentType.swift"; sourceTree = "<group>"; };
+		8869D2612B80D101000D2F29 /* PackModelMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackModelMapper.swift; sourceTree = "<group>"; };
+		8869D2632B80D107000D2F29 /* PackModelMapperImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackModelMapperImpl.swift; sourceTree = "<group>"; };
 		96F920E0E0807B41F317A8DF /* Pods-InPost Interview Coding TaskTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InPost Interview Coding TaskTests.debug.xcconfig"; path = "Target Support Files/Pods-InPost Interview Coding TaskTests/Pods-InPost Interview Coding TaskTests.debug.xcconfig"; sourceTree = "<group>"; };
 		9D61EABD2778CE163139EDFE /* Pods_InPost_Interview_Coding_Task.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InPost_Interview_Coding_Task.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D671D9542913E528001FA9D5 /* InPost Interview Coding Task.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "InPost Interview Coding Task.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -163,8 +167,26 @@
 			children = (
 				8869D2592B80C671000D2F29 /* Container.swift */,
 				D671D9952915110C001FA9D5 /* Networking */,
+				8869D25F2B80D0E5000D2F29 /* Mappers */,
 			);
 			path = Dependencies;
+			sourceTree = "<group>";
+		};
+		8869D25F2B80D0E5000D2F29 /* Mappers */ = {
+			isa = PBXGroup;
+			children = (
+				8869D2602B80D0EF000D2F29 /* PackModelMapper */,
+			);
+			path = Mappers;
+			sourceTree = "<group>";
+		};
+		8869D2602B80D0EF000D2F29 /* PackModelMapper */ = {
+			isa = PBXGroup;
+			children = (
+				8869D2612B80D101000D2F29 /* PackModelMapper.swift */,
+				8869D2632B80D107000D2F29 /* PackModelMapperImpl.swift */,
+			);
+			path = PackModelMapper;
 			sourceTree = "<group>";
 		};
 		913D9F73B32F33C130C9E20B /* Frameworks */ = {
@@ -559,6 +581,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				8869D2422B80AE1D000D2F29 /* PackCell.swift in Sources */,
+				8869D2622B80D101000D2F29 /* PackModelMapper.swift in Sources */,
+				8869D2642B80D107000D2F29 /* PackModelMapperImpl.swift in Sources */,
 				8869D2482B80B6D0000D2F29 /* Pack+Status.swift in Sources */,
 				8869D2582B80C60C000D2F29 /* PackNetworking.swift in Sources */,
 				8869D23E2B80AC9D000D2F29 /* View+Anchors.swift in Sources */,

@@ -9,7 +9,7 @@ import Foundation
 
 struct PackListSection {
     let title: String
-    let packs: [Pack]
+    let packs: [PackView.Model]
 }
 
 enum PackGroup: CaseIterable {

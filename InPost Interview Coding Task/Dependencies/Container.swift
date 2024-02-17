@@ -13,4 +13,9 @@ extension Container {
         self { PackNetworkingImpl() }
             .shared
     }
+
+    var packModelMapper: Factory<PackModelMapper> {
+        self { PackModelMapperImpl() }
+            .shared
+    }
 }

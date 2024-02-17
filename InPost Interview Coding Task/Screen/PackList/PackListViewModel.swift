@@ -11,6 +11,7 @@ import Factory
 
 final class PackListViewModel {
     @Injected(\.packNetworking) var packNetworking
+    @Injected(\.packModelMapper) var packMapper
     @Published private(set) var sections = [PackListSection]()
 
     func fetchPacks() {
@@ -32,7 +33,7 @@ private extension PackListViewModel {
                 $0.key.order < $1.key.order
             })
             .map {
-                .init(title: $0.key.title, packs: $0.value)
+                .init(title: $0.key.title, packs: packMapper.map(packs: $0.value))
             }
     }
 }

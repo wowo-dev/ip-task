@@ -87,19 +87,13 @@ extension PackListController: UITableViewDataSource {
         }
         
         let packs = viewModel.sections[indexPath.section].packs
-        let pack = packs[indexPath.row]
-        packCell.setup(model: pack.cellModel)
+        let model = packs[indexPath.row]
+        packCell.setup(model: model)
 
         return packCell
     }
 
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         viewModel.sections[section].title
-    }
-}
-
-private extension Pack {
-    var cellModel: PackView.Model {
-        .init(id: id, status: status.rawValue, sender: sender, shipmentIconName: "", dateTitle: nil, date: nil)
     }
 }
