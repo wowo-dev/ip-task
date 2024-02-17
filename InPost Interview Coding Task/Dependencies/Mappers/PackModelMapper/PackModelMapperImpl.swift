@@ -8,18 +8,85 @@
 import Foundation
 
 final class PackModelMapperImpl {
+    private let dateFormatter = DateFormatter()
 
+    init() {
+        dateFormatter.dateFormat = "E | dd.MM.yy | HH:mm"
+    }
 }
 
 // MARK: - PackModelMapper
 extension PackModelMapperImpl: PackModelMapper {
     func map(packs: [Pack]) -> [PackView.Model] {
-        packs.map(\.cellModel)
+        packs.map(mapPack)
+    }
+}
+
+// MARK: - Private
+private extension PackModelMapperImpl {
+    func mapPack(_ pack: Pack) -> PackView.Model {
+        let displayDateTitle = pack.displayDateTitle
+        var formattedDate: String?
+
+        if let displayDate = pack.displayDate {
+            formattedDate = dateFormatter.string(from: displayDate)
+        }
+
+        let model = PackView.Model(
+            id: pack.id,
+            status: pack.status.title,
+            sender: pack.sender,
+            shipmentIconName: pack.shipmentType.iconName,
+            dateTitle: displayDateTitle,
+            date: formattedDate
+        )
+        return model
+    }
+}
+
+private extension Pack.Status {
+    var title: String {
+        switch self {
+        case .created: "W trakcie przygotowania"
+        case .confirmed: "Nadana"
+        case .adoptedAtSourceBranch: "Przyjęta w oddziale"
+        case .sentFromSourceBranch: "Wysłana z oddziału"
+        case .adoptedAtSortingCenter: "Przyjęta w sortowni"
+        case .sentFromSortingCenter: "Wysłana z sortowni"
+        case .other: "Inny"
+        case .delivered: "Odebrana"
+        case .returnedToSender: "Zwrócona do nadawcy"
+        case .avizo: "Awizo"
+        case .outForDelivery: "Wydana do doręczenia"
+        case .readyToPickup: "Gotowa do odbioru"
+        case .pickupTimeExpired: "Upłynął termin odbioru"
+        }
+    }
+}
+
+private extension Pack.ShipmentType {
+    var iconName: String {
+        switch self {
+        case .parcelLocker: ""
+        case .courier: ""
+        }
     }
 }
 
 private extension Pack {
-    var cellModel: PackView.Model {
-        .init(id: id, status: status.rawValue, sender: sender, shipmentIconName: "", dateTitle: nil, date: nil)
+    var displayDateTitle: String? {
+        switch status {
+        case .delivered: "ODEBRANA"
+        case .readyToPickup: "CZEKA NA ODBIÓR DO"
+        default: nil
+        }
+    }
+
+    var displayDate: Date? {
+        switch status {
+        case .delivered: pickupDate
+        case .readyToPickup: expiryDate
+        default: nil
+        }
     }
 }
