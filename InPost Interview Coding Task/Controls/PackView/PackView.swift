@@ -14,8 +14,11 @@ class PackView: UIView {
     @IBOutlet private var contentContainer: UIView!
     @IBOutlet private var numberTitleLabel: UILabel!
     @IBOutlet private var numberLabel: UILabel!
+    @IBOutlet private var shipmentTypeImage: UIImageView!
     @IBOutlet private var statusTitleLabel: UILabel!
     @IBOutlet private var statusLabel: UILabel!
+    @IBOutlet private var dateTitleLabel: UILabel!
+    @IBOutlet private var dateLabel: UILabel!
     @IBOutlet private var senderTitleLabel: UILabel!
     @IBOutlet private var senderLabel: UILabel!
     
