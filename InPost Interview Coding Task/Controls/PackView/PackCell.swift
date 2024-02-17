@@ -23,7 +23,6 @@ class PackCell: UITableViewCell, TableViewCell {
 
     func setup(model: PackView.Model, isLast: Bool) {
         packView.setup(model: model)
-        print(model.sender, "isLast:", isLast)
         bottomConstraint?.constant = isLast ? 0 : -16
     }
 }
