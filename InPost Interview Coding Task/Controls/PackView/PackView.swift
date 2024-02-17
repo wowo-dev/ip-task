@@ -32,10 +32,13 @@ class PackView: UIView {
         setupView()
     }
     
-    func setup(pack: Pack) {
-        numberLabel.text = pack.id
-        statusLabel.text = pack.status.rawValue
-        senderLabel.text = pack.sender
+    func setup(model: Model) {
+        numberLabel.text = model.id
+        statusLabel.text = model.status
+        senderLabel.text = model.sender
+        dateTitleLabel.text = model.dateTitle
+        dateLabel.text = model.date
+        shipmentTypeImage.image = UIImage(named: model.shipmentIconName)
     }
     
     private func setupView() {

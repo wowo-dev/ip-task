@@ -14,5 +14,5 @@ struct Pack: Codable {
     let expiryDate: Date?
     let pickupDate: Date?
     let storedDate: Date?
-    let shipmentType: String
+    let shipmentType: ShipmentType
 }

@@ -20,8 +20,8 @@ class PackCell: UITableViewCell, TableViewCell {
         setup()
     }
 
-    func set(pack: Pack) {
-        packView.setup(pack: pack)
+    func setup(model: PackView.Model) {
+        packView.setup(model: model)
     }
 }
 
