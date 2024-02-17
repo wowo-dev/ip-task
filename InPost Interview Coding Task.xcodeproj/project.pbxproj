@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		0ABB2A19C1443362ECFE34A7 /* Pods_InPost_Interview_Coding_TaskTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9D6C720825E15C8DB9CDFC0 /* Pods_InPost_Interview_Coding_TaskTests.framework */; };
 		8869D23E2B80AC9D000D2F29 /* View+Anchors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8869D23D2B80AC9D000D2F29 /* View+Anchors.swift */; };
+		8869D2422B80AE1D000D2F29 /* PackCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8869D2412B80AE1D000D2F29 /* PackCell.swift */; };
+		8869D2442B80AE78000D2F29 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8869D2432B80AE78000D2F29 /* TableViewCell.swift */; };
 		D671D9582913E528001FA9D5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D671D9572913E528001FA9D5 /* AppDelegate.swift */; };
 		D671D95C2913E528001FA9D5 /* PackListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D671D95B2913E528001FA9D5 /* PackListController.swift */; };
 		D671D95F2913E528001FA9D5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D671D95D2913E528001FA9D5 /* Main.storyboard */; };
@@ -49,6 +51,8 @@
 		86F3EED5272EDA4036556337 /* Pods-InPost Interview Coding Task.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InPost Interview Coding Task.debug.xcconfig"; path = "Target Support Files/Pods-InPost Interview Coding Task/Pods-InPost Interview Coding Task.debug.xcconfig"; sourceTree = "<group>"; };
 		871FC296EE090F4634A2C236 /* Pods_InPost_Interview_Coding_Task_InPost_Interview_Coding_TaskUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InPost_Interview_Coding_Task_InPost_Interview_Coding_TaskUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8869D23D2B80AC9D000D2F29 /* View+Anchors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Anchors.swift"; sourceTree = "<group>"; };
+		8869D2412B80AE1D000D2F29 /* PackCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackCell.swift; sourceTree = "<group>"; };
+		8869D2432B80AE78000D2F29 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		96F920E0E0807B41F317A8DF /* Pods-InPost Interview Coding TaskTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InPost Interview Coding TaskTests.debug.xcconfig"; path = "Target Support Files/Pods-InPost Interview Coding TaskTests/Pods-InPost Interview Coding TaskTests.debug.xcconfig"; sourceTree = "<group>"; };
 		9D61EABD2778CE163139EDFE /* Pods_InPost_Interview_Coding_Task.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InPost_Interview_Coding_Task.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D671D9542913E528001FA9D5 /* InPost Interview Coding Task.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "InPost Interview Coding Task.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -111,6 +115,7 @@
 		8869D23B2B80ABFD000D2F29 /* TableView */ = {
 			isa = PBXGroup;
 			children = (
+				8869D2432B80AE78000D2F29 /* TableViewCell.swift */,
 			);
 			path = TableView;
 			sourceTree = "<group>";
@@ -238,6 +243,7 @@
 			children = (
 				D671D9902913F79B001FA9D5 /* PackView.swift */,
 				D671D9932913F82E001FA9D5 /* PackView.xib */,
+				8869D2412B80AE1D000D2F29 /* PackCell.swift */,
 			);
 			path = PackView;
 			sourceTree = "<group>";
@@ -500,9 +506,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8869D2422B80AE1D000D2F29 /* PackCell.swift in Sources */,
 				8869D23E2B80AC9D000D2F29 /* View+Anchors.swift in Sources */,
 				D671D9972915111C001FA9D5 /* PackNetworking.swift in Sources */,
 				D671D98F2913F2A1001FA9D5 /* Pack.swift in Sources */,
+				8869D2442B80AE78000D2F29 /* TableViewCell.swift in Sources */,
 				D671D98C2913EDA4001FA9D5 /* IPNavigationController.swift in Sources */,
 				D671D95C2913E528001FA9D5 /* PackListController.swift in Sources */,
 				D671D9912913F79B001FA9D5 /* PackView.swift in Sources */,

@@ -34,6 +34,8 @@ private extension PackListController {
             tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor)
         )
+
+        tableView.register(PackCell.self, forCellReuseIdentifier: PackCell.reuseIdentifier)
     }
 }
 
