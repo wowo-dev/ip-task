@@ -35,6 +35,12 @@ private extension PackListController {
             tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor)
         )
 
+        tableView.backgroundColor = .clear
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.estimatedRowHeight = 256
+        tableView.separatorStyle = .none
+        tableView.allowsSelection = false
+        tableView.dataSource = self
         tableView.register(PackCell.self, forCellReuseIdentifier: PackCell.reuseIdentifier)
     }
 }
@@ -45,7 +51,32 @@ private extension PackListController {
         packNetworking.getPacks { [weak self] result in
             if case .success(let packs) = result {
                 self?.packs = packs
+            } else {
+                self?.packs = []
             }
+
+            self?.tableView.reloadData()
         }
+    }
+}
+
+// MARK: - UITableViewDataSource
+extension PackListController: UITableViewDataSource {
+    func numberOfSections(in tableView: UITableView) -> Int {
+        1
+    }
+
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        packs.count
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: PackCell.reuseIdentifier, for: indexPath)
+
+        if let packCell = cell as? PackCell {
+            packCell.set(pack: packs[indexPath.row])
+        }
+
+        return cell
     }
 }
