@@ -24,6 +24,7 @@
 		8869D2622B80D101000D2F29 /* PackModelMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8869D2612B80D101000D2F29 /* PackModelMapper.swift */; };
 		8869D2642B80D107000D2F29 /* PackModelMapperImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8869D2632B80D107000D2F29 /* PackModelMapperImpl.swift */; };
 		8869D2692B80DAE5000D2F29 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8869D2682B80DAE5000D2F29 /* Images.xcassets */; };
+		8869D26C2B80F923000D2F29 /* UIColor+Palette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8869D26B2B80F923000D2F29 /* UIColor+Palette.swift */; };
 		D671D9582913E528001FA9D5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D671D9572913E528001FA9D5 /* AppDelegate.swift */; };
 		D671D95C2913E528001FA9D5 /* PackListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D671D95B2913E528001FA9D5 /* PackListController.swift */; };
 		D671D95F2913E528001FA9D5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D671D95D2913E528001FA9D5 /* Main.storyboard */; };
@@ -77,6 +78,7 @@
 		8869D2612B80D101000D2F29 /* PackModelMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackModelMapper.swift; sourceTree = "<group>"; };
 		8869D2632B80D107000D2F29 /* PackModelMapperImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackModelMapperImpl.swift; sourceTree = "<group>"; };
 		8869D2682B80DAE5000D2F29 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		8869D26B2B80F923000D2F29 /* UIColor+Palette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Palette.swift"; sourceTree = "<group>"; };
 		96F920E0E0807B41F317A8DF /* Pods-InPost Interview Coding TaskTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InPost Interview Coding TaskTests.debug.xcconfig"; path = "Target Support Files/Pods-InPost Interview Coding TaskTests/Pods-InPost Interview Coding TaskTests.debug.xcconfig"; sourceTree = "<group>"; };
 		9D61EABD2778CE163139EDFE /* Pods_InPost_Interview_Coding_Task.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InPost_Interview_Coding_Task.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D671D9542913E528001FA9D5 /* InPost Interview Coding Task.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "InPost Interview Coding Task.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -150,6 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				8869D23D2B80AC9D000D2F29 /* View+Anchors.swift */,
+				8869D26B2B80F923000D2F29 /* UIColor+Palette.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -603,6 +606,7 @@
 				D671D9912913F79B001FA9D5 /* PackView.swift in Sources */,
 				8869D24D2B80BCBD000D2F29 /* PackListModels.swift in Sources */,
 				D671D9582913E528001FA9D5 /* AppDelegate.swift in Sources */,
+				8869D26C2B80F923000D2F29 /* UIColor+Palette.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
