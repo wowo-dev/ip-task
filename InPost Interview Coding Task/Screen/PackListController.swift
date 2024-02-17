@@ -6,17 +6,20 @@
 //
 
 import UIKit
+import Combine
 
 class PackListController: UIViewController {
     private let tableView = UITableView(frame: .zero, style: .grouped)
     
     private let viewModel = PackListViewModel()
     private var packs = [Pack]()
+    private var subscribers = Set<AnyCancellable>()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = "Lista przesyłek"
         setupView()
+        setupBindings()
         loadPacks()
     }
 }
@@ -46,9 +49,22 @@ private extension PackListController {
     }
 }
 
+// MARK: - Bindings setup
+private extension PackListController {
+    func setupBindings() {
+        viewModel.$packs
+            .dropFirst()
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] _ in
+                self?.tableView.reloadData()
+            }
+            .store(in: &subscribers)
+    }
+}
+
 // MARK: - Actions
 private extension PackListController {
-    private func loadPacks() {
+    func loadPacks() {
         viewModel.fetchPacks()
     }
 }
