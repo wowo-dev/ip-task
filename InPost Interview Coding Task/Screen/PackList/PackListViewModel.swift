@@ -10,14 +10,18 @@ import Combine
 final class PackListViewModel {
     private let packNetworking = PackNetworking()
 
-    @Published private(set) var packs = [Pack]()
+    @Published private(set) var sections = [PackListSection]()
 
     func fetchPacks() {
         Task {
             do {
-                packs = try await packNetworking.getPacks()
+                let packs = try await packNetworking.getPacks()
+                sections = [
+                    .init(title: "Wszystkie", packs: packs)
+                ]
+
             } catch {
-                packs = []
+                sections = []
             }
         }
     }

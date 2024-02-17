@@ -52,7 +52,7 @@ private extension PackListController {
 // MARK: - Bindings setup
 private extension PackListController {
     func setupBindings() {
-        viewModel.$packs
+        viewModel.$sections
             .dropFirst()
             .receive(on: DispatchQueue.main)
             .sink { [weak self] _ in
@@ -72,20 +72,24 @@ private extension PackListController {
 // MARK: - UITableViewDataSource
 extension PackListController: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
-        1
+        viewModel.sections.count
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        viewModel.packs.count
+        viewModel.sections[section].packs.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: PackCell.reuseIdentifier, for: indexPath)
 
-        if let packCell = cell as? PackCell {
-            packCell.set(pack: viewModel.packs[indexPath.row])
+        guard let packCell = cell as? PackCell else {
+            return cell
         }
+        
+        let packs = viewModel.sections[indexPath.section].packs
+        let pack = packs[indexPath.row]
+        packCell.set(pack: pack)
 
-        return cell
+        return packCell
     }
 }
