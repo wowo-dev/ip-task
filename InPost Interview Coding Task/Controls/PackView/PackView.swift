@@ -30,7 +30,14 @@ class PackView: UIView {
         super.init(coder: coder)
         setupView()
     }
-    
+
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        setupContainerShadowPath()
+    }
+}
+
+extension PackView {
     func setup(model: Model) {
         numberLabel.attributedText = .init(text: model.id, style: .subheadline)
         statusLabel.attributedText = .init(text: model.status, style: .headline)
@@ -39,29 +46,39 @@ class PackView: UIView {
         dateLabel.attributedText = model.attributedDate
         shipmentTypeImage.image = UIImage(named: model.shipmentIconName)
     }
-    
+}
+
+// MARK: - Subviews setup
+private extension PackView {
     private func setupView() {
         loadView()
-        setupContainerStyle()
         setupTexts()
+        setupContainerStyle()
     }
-    
+
     private func loadView() {
         Bundle.main.loadNibNamed("PackView", owner: self, options: nil)
         addSubview(contentView)
         contentView.frame = bounds
         contentView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
     }
-    
+
     private func setupContainerStyle() {
-        // TODO: Look out for shadow performance?
         contentContainer.backgroundColor = .commonBackground
-        contentContainer.layer.shadowColor = UIColor.black.cgColor
+        contentContainer.layer.shadowColor = UIColor.commonShadow.cgColor
         contentContainer.layer.shadowRadius = 5
         contentContainer.layer.shadowOffset = .init(width: 0, height: 5)
         contentContainer.layer.shadowOpacity = 0.1
     }
-    
+
+    private func setupContainerShadowPath() {
+        guard contentContainer.layer.shadowPath == nil && !bounds.width.isZero && !bounds.height.isZero else {
+            return
+        }
+
+        contentContainer.layer.shadowPath = UIBezierPath(rect: bounds).cgPath
+    }
+
     private func setupTexts() {
         numberTitleLabel.attributedText = .init(text: "pack_view_title_number".localized, style: .overline)
         statusTitleLabel.attributedText = .init(text: "pack_view_title_status".localized, style: .overline)

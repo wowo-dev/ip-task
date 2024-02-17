@@ -36,6 +36,10 @@ extension UIColor {
         color(named: "divider_text")
     }
 
+    static var commonShadow: UIColor {
+        color(named: "common_shadow")
+    }
+
     private static func color(named name: String) -> UIColor {
         UIColor(named: name) ?? .white
     }
