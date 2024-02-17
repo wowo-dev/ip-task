@@ -14,6 +14,6 @@ extension PackView {
         let sender: String
         let shipmentIconName: String
         let dateTitle: String?
-        let date: String?
+        let attributedDate: NSAttributedString?
     }
 }

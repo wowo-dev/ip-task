@@ -36,7 +36,7 @@ class PackView: UIView {
         statusLabel.attributedText = .init(text: model.status, style: .headline)
         senderLabel.attributedText = .init(text: model.sender, style: .headline)
         dateTitleLabel.attributedText = .init(text: model.dateTitle ?? "", style: .overline, alignment: .right)
-        dateLabel.attributedText = .init(text: model.date ?? "", style: .subheadline, alignment: .right)
+        dateLabel.attributedText = model.attributedDate
         shipmentTypeImage.image = UIImage(named: model.shipmentIconName)
     }
     

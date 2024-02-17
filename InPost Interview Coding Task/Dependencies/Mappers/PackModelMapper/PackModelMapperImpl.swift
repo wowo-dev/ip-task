@@ -6,12 +6,14 @@
 //
 
 import Foundation
+import UIKit
 
 final class PackModelMapperImpl {
+    private let dateSeparator = " | "
     private let dateFormatter = DateFormatter()
 
     init() {
-        dateFormatter.dateFormat = "E | dd.MM.yy | HH:mm"
+        dateFormatter.dateFormat = ["E", "dd.MM.yy", "HH:mm"].joined(separator: dateSeparator)
     }
 }
 
@@ -25,22 +27,34 @@ extension PackModelMapperImpl: PackModelMapper {
 // MARK: - Private
 private extension PackModelMapperImpl {
     func mapPack(_ pack: Pack) -> PackView.Model {
-        let displayDateTitle = pack.displayDateTitle
-        var formattedDate: String?
-
-        if let displayDate = pack.displayDate {
-            formattedDate = dateFormatter.string(from: displayDate)
-        }
-
+        let attributedDate = mapDisplayDate(pack.displayDate)
         let model = PackView.Model(
             id: pack.id,
             status: pack.status.title,
             sender: pack.sender,
             shipmentIconName: pack.shipmentType.iconName,
-            dateTitle: displayDateTitle,
-            date: formattedDate
+            dateTitle: pack.displayDateTitle,
+            attributedDate: attributedDate
         )
         return model
+    }
+
+    func mapDisplayDate(_ displayDate: Date?) -> NSAttributedString? {
+        guard let displayDate else {
+            return nil
+        }
+
+        let formattedDate = dateFormatter.string(from: displayDate)
+        let attributedDate = NSAttributedString(text: formattedDate, style: .subheadline)
+        let mutableAttributedDate = NSMutableAttributedString(attributedString: attributedDate)
+
+        formattedDate
+            .ranges(of: dateSeparator)
+            .forEach {
+                mutableAttributedDate.addAttribute(.foregroundColor, value: UIColor.label, range: $0)
+            }
+
+        return mutableAttributedDate
     }
 }
 
