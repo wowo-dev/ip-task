@@ -17,6 +17,8 @@
 		8869D24D2B80BCBD000D2F29 /* PackListModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8869D24C2B80BCBD000D2F29 /* PackListModels.swift */; };
 		8869D2502B80BDF5000D2F29 /* Collections in Frameworks */ = {isa = PBXBuildFile; productRef = 8869D24F2B80BDF5000D2F29 /* Collections */; };
 		8869D2532B80C3F7000D2F29 /* Factory in Frameworks */ = {isa = PBXBuildFile; productRef = 8869D2522B80C3F7000D2F29 /* Factory */; };
+		8869D2582B80C60C000D2F29 /* PackNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8869D2572B80C60C000D2F29 /* PackNetworking.swift */; };
+		8869D25A2B80C671000D2F29 /* Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8869D2592B80C671000D2F29 /* Container.swift */; };
 		D671D9582913E528001FA9D5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D671D9572913E528001FA9D5 /* AppDelegate.swift */; };
 		D671D95C2913E528001FA9D5 /* PackListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D671D95B2913E528001FA9D5 /* PackListController.swift */; };
 		D671D95F2913E528001FA9D5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D671D95D2913E528001FA9D5 /* Main.storyboard */; };
@@ -63,6 +65,8 @@
 		8869D2472B80B6D0000D2F29 /* Pack+Status.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Pack+Status.swift"; sourceTree = "<group>"; };
 		8869D2492B80B8E0000D2F29 /* OptionalElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionalElement.swift; sourceTree = "<group>"; };
 		8869D24C2B80BCBD000D2F29 /* PackListModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackListModels.swift; sourceTree = "<group>"; };
+		8869D2572B80C60C000D2F29 /* PackNetworking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackNetworking.swift; sourceTree = "<group>"; };
+		8869D2592B80C671000D2F29 /* Container.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Container.swift; sourceTree = "<group>"; };
 		96F920E0E0807B41F317A8DF /* Pods-InPost Interview Coding TaskTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InPost Interview Coding TaskTests.debug.xcconfig"; path = "Target Support Files/Pods-InPost Interview Coding TaskTests/Pods-InPost Interview Coding TaskTests.debug.xcconfig"; sourceTree = "<group>"; };
 		9D61EABD2778CE163139EDFE /* Pods_InPost_Interview_Coding_Task.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InPost_Interview_Coding_Task.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D671D9542913E528001FA9D5 /* InPost Interview Coding Task.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "InPost Interview Coding Task.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -153,6 +157,7 @@
 		8869D2542B80C44F000D2F29 /* Dependencies */ = {
 			isa = PBXGroup;
 			children = (
+				8869D2592B80C671000D2F29 /* Container.swift */,
 				D671D9952915110C001FA9D5 /* Networking */,
 			);
 			path = Dependencies;
@@ -282,6 +287,7 @@
 		D671D9952915110C001FA9D5 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				8869D2572B80C60C000D2F29 /* PackNetworking.swift */,
 				D671D9962915111C001FA9D5 /* PackNetworkingImpl.swift */,
 				8869D2492B80B8E0000D2F29 /* OptionalElement.swift */,
 				D671D99929151360001FA9D5 /* Mock */,
@@ -548,10 +554,12 @@
 			files = (
 				8869D2422B80AE1D000D2F29 /* PackCell.swift in Sources */,
 				8869D2482B80B6D0000D2F29 /* Pack+Status.swift in Sources */,
+				8869D2582B80C60C000D2F29 /* PackNetworking.swift in Sources */,
 				8869D23E2B80AC9D000D2F29 /* View+Anchors.swift in Sources */,
 				D671D9972915111C001FA9D5 /* PackNetworkingImpl.swift in Sources */,
 				8869D2462B80B18F000D2F29 /* PackListViewModel.swift in Sources */,
 				D671D98F2913F2A1001FA9D5 /* Pack.swift in Sources */,
+				8869D25A2B80C671000D2F29 /* Container.swift in Sources */,
 				8869D2442B80AE78000D2F29 /* TableViewCell.swift in Sources */,
 				D671D98C2913EDA4001FA9D5 /* IPNavigationController.swift in Sources */,
 				8869D24A2B80B8E0000D2F29 /* OptionalElement.swift in Sources */,

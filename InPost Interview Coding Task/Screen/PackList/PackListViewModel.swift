@@ -7,10 +7,10 @@
 
 import Combine
 import OrderedCollections
+import Factory
 
 final class PackListViewModel {
-    private let packNetworking = PackNetworkingImpl()
-
+    @Injected(\.packNetworking) var packNetworking
     @Published private(set) var sections = [PackListSection]()
 
     func fetchPacks() {
