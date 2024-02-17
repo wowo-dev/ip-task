@@ -9,7 +9,7 @@ import UIKit
 
 extension UIColor {
     static var accent: UIColor {
-        color(named: "accent")
+        color(named: "AccentColor")
     }
 
     static var commonBackground: UIColor {

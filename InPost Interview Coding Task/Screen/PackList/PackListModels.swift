@@ -11,6 +11,7 @@ enum PackListState {
     case loading
     case list
     case empty
+    case error
 }
 
 struct PackListSection {

@@ -37,6 +37,28 @@
         }
       }
     },
+    "pack_list_error_retry_button" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Spróbuj ponownie"
+          }
+        }
+      }
+    },
+    "pack_list_error_title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nie udało się pobrać listy przesyłek"
+          }
+        }
+      }
+    },
     "pack_list_title" : {
       "extractionState" : "manual",
       "localizations" : {

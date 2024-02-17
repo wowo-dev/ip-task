@@ -31,8 +31,14 @@ final class PackListViewModel {
                 state = .list
             } catch {
                 sections = []
+                state = .error
             }
         }
+    }
+
+    func retryFetchPack() {
+        state = .loading
+        fetchPacks()
     }
 }
 
