@@ -36,6 +36,11 @@
 		8869D2802B80FC21000D2F29 /* TextStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8869D27F2B80FC21000D2F29 /* TextStyle.swift */; };
 		8869D2822B80FCCF000D2F29 /* NSAttributedString+TextStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8869D2812B80FCCF000D2F29 /* NSAttributedString+TextStyle.swift */; };
 		8869D2842B8109A9000D2F29 /* String+Ranges.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8869D2832B8109A9000D2F29 /* String+Ranges.swift */; };
+		8869D2872B810B9B000D2F29 /* PackHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8869D2862B810B9B000D2F29 /* PackHeader.swift */; };
+		8869D2892B810BFE000D2F29 /* TableViewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8869D2882B810BFE000D2F29 /* TableViewItem.swift */; };
+		8869D28B2B810C2A000D2F29 /* TableViewHeaderFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8869D28A2B810C2A000D2F29 /* TableViewHeaderFooter.swift */; };
+		8869D28D2B810C4F000D2F29 /* UITableView+Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8869D28C2B810C4F000D2F29 /* UITableView+Register.swift */; };
+		8869D28F2B810C76000D2F29 /* UITableView+Dequeue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8869D28E2B810C76000D2F29 /* UITableView+Dequeue.swift */; };
 		D671D9582913E528001FA9D5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D671D9572913E528001FA9D5 /* AppDelegate.swift */; };
 		D671D95C2913E528001FA9D5 /* PackListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D671D95B2913E528001FA9D5 /* PackListController.swift */; };
 		D671D95F2913E528001FA9D5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D671D95D2913E528001FA9D5 /* Main.storyboard */; };
@@ -101,6 +106,11 @@
 		8869D27F2B80FC21000D2F29 /* TextStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextStyle.swift; sourceTree = "<group>"; };
 		8869D2812B80FCCF000D2F29 /* NSAttributedString+TextStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSAttributedString+TextStyle.swift"; sourceTree = "<group>"; };
 		8869D2832B8109A9000D2F29 /* String+Ranges.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ranges.swift"; sourceTree = "<group>"; };
+		8869D2862B810B9B000D2F29 /* PackHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackHeader.swift; sourceTree = "<group>"; };
+		8869D2882B810BFE000D2F29 /* TableViewItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewItem.swift; sourceTree = "<group>"; };
+		8869D28A2B810C2A000D2F29 /* TableViewHeaderFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewHeaderFooter.swift; sourceTree = "<group>"; };
+		8869D28C2B810C4F000D2F29 /* UITableView+Register.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Register.swift"; sourceTree = "<group>"; };
+		8869D28E2B810C76000D2F29 /* UITableView+Dequeue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Dequeue.swift"; sourceTree = "<group>"; };
 		96F920E0E0807B41F317A8DF /* Pods-InPost Interview Coding TaskTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InPost Interview Coding TaskTests.debug.xcconfig"; path = "Target Support Files/Pods-InPost Interview Coding TaskTests/Pods-InPost Interview Coding TaskTests.debug.xcconfig"; sourceTree = "<group>"; };
 		9D61EABD2778CE163139EDFE /* Pods_InPost_Interview_Coding_Task.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InPost_Interview_Coding_Task.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D671D9542913E528001FA9D5 /* InPost Interview Coding Task.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "InPost Interview Coding Task.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -166,7 +176,11 @@
 		8869D23B2B80ABFD000D2F29 /* TableView */ = {
 			isa = PBXGroup;
 			children = (
+				8869D2882B810BFE000D2F29 /* TableViewItem.swift */,
 				8869D2432B80AE78000D2F29 /* TableViewCell.swift */,
+				8869D28A2B810C2A000D2F29 /* TableViewHeaderFooter.swift */,
+				8869D28C2B810C4F000D2F29 /* UITableView+Register.swift */,
+				8869D28E2B810C76000D2F29 /* UITableView+Dequeue.swift */,
 			);
 			path = TableView;
 			sourceTree = "<group>";
@@ -240,6 +254,14 @@
 				8869D27F2B80FC21000D2F29 /* TextStyle.swift */,
 			);
 			path = Font;
+			sourceTree = "<group>";
+		};
+		8869D2852B810B73000D2F29 /* PackHeader */ = {
+			isa = PBXGroup;
+			children = (
+				8869D2862B810B9B000D2F29 /* PackHeader.swift */,
+			);
+			path = PackHeader;
 			sourceTree = "<group>";
 		};
 		913D9F73B32F33C130C9E20B /* Frameworks */ = {
@@ -340,6 +362,7 @@
 		D671D98A2913ED95001FA9D5 /* Controls */ = {
 			isa = PBXGroup;
 			children = (
+				8869D2852B810B73000D2F29 /* PackHeader */,
 				D671D9922913F81D001FA9D5 /* PackView */,
 				D671D98B2913EDA4001FA9D5 /* IPNavigationController.swift */,
 			);
@@ -359,10 +382,10 @@
 		D671D9922913F81D001FA9D5 /* PackView */ = {
 			isa = PBXGroup;
 			children = (
-				D671D9902913F79B001FA9D5 /* PackView.swift */,
-				D671D9932913F82E001FA9D5 /* PackView.xib */,
 				8869D2412B80AE1D000D2F29 /* PackCell.swift */,
+				D671D9902913F79B001FA9D5 /* PackView.swift */,
 				8869D25B2B80CE3D000D2F29 /* PackView+Model.swift */,
+				D671D9932913F82E001FA9D5 /* PackView.xib */,
 			);
 			path = PackView;
 			sourceTree = "<group>";
@@ -645,17 +668,22 @@
 				8869D2422B80AE1D000D2F29 /* PackCell.swift in Sources */,
 				8869D2622B80D101000D2F29 /* PackModelMapper.swift in Sources */,
 				8869D2642B80D107000D2F29 /* PackModelMapperImpl.swift in Sources */,
+				8869D2892B810BFE000D2F29 /* TableViewItem.swift in Sources */,
 				8869D2482B80B6D0000D2F29 /* Pack+Status.swift in Sources */,
 				8869D2582B80C60C000D2F29 /* PackNetworking.swift in Sources */,
 				8869D23E2B80AC9D000D2F29 /* View+Anchors.swift in Sources */,
 				8869D27E2B80FB50000D2F29 /* UIFont+Typography.swift in Sources */,
+				8869D2872B810B9B000D2F29 /* PackHeader.swift in Sources */,
+				8869D28D2B810C4F000D2F29 /* UITableView+Register.swift in Sources */,
 				D671D9972915111C001FA9D5 /* PackNetworkingImpl.swift in Sources */,
 				8869D27A2B80FAA3000D2F29 /* MontserratFont.swift in Sources */,
 				8869D25C2B80CE3D000D2F29 /* PackView+Model.swift in Sources */,
 				8869D2462B80B18F000D2F29 /* PackListViewModel.swift in Sources */,
 				D671D98F2913F2A1001FA9D5 /* Pack.swift in Sources */,
+				8869D28B2B810C2A000D2F29 /* TableViewHeaderFooter.swift in Sources */,
 				8869D25E2B80CEC0000D2F29 /* Pack+ShipmentType.swift in Sources */,
 				8869D2842B8109A9000D2F29 /* String+Ranges.swift in Sources */,
+				8869D28F2B810C76000D2F29 /* UITableView+Dequeue.swift in Sources */,
 				8869D25A2B80C671000D2F29 /* Container.swift in Sources */,
 				8869D2442B80AE78000D2F29 /* TableViewCell.swift in Sources */,
 				8869D2822B80FCCF000D2F29 /* NSAttributedString+TextStyle.swift in Sources */,

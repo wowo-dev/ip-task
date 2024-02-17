@@ -45,7 +45,10 @@ private extension PackListController {
         tableView.separatorStyle = .none
         tableView.allowsSelection = false
         tableView.dataSource = self
-        tableView.register(PackCell.self, forCellReuseIdentifier: PackCell.reuseIdentifier)
+        tableView.delegate = self
+
+        tableView.register(cell: PackCell.self)
+        tableView.register(headerFooter: PackHeader.self)
     }
 }
 
@@ -80,7 +83,7 @@ extension PackListController: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: PackCell.reuseIdentifier, for: indexPath)
+        let cell = tableView.dequeue(cell: PackCell.self, for: indexPath)
 
         guard let packCell = cell as? PackCell else {
             return cell
@@ -92,8 +95,17 @@ extension PackListController: UITableViewDataSource {
 
         return packCell
     }
+}
 
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        viewModel.sections[section].title
+// MARK: - UITableViewDelegate
+extension PackListController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let header = tableView.dequeue(headerFooter: PackHeader.self) as? PackHeader
+        header?.set(title: viewModel.sections[section].title)
+        return header
+    }
+
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        48
     }
 }
