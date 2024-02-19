@@ -8,7 +8,7 @@
 import Foundation
 
 extension PackView {
-    struct Model {
+    struct Model: Equatable {
         let id: String
         let status: String
         let sender: String
