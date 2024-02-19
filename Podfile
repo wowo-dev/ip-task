@@ -5,7 +5,8 @@ target 'InPost Interview Coding Task' do
   use_frameworks!
 
   # Pods for InPost Interview Coding Task
-  pod 'RealmSwift'
+  # pod 'RealmSwift'
+  pod 'Sourcery'
 
   target 'InPost Interview Coding TaskTests' do
     inherit! :search_paths

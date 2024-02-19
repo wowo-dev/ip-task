@@ -1,22 +1,18 @@
 PODS:
-  - Realm (10.29.0):
-    - Realm/Headers (= 10.29.0)
-  - Realm/Headers (10.29.0)
-  - RealmSwift (10.29.0):
-    - Realm (= 10.29.0)
+  - Sourcery (2.1.7):
+    - Sourcery/CLI-Only (= 2.1.7)
+  - Sourcery/CLI-Only (2.1.7)
 
 DEPENDENCIES:
-  - RealmSwift
+  - Sourcery
 
 SPEC REPOS:
   trunk:
-    - Realm
-    - RealmSwift
+    - Sourcery
 
 SPEC CHECKSUMS:
-  Realm: 5596770daeff1ad76c8eb10d5947dc10472da779
-  RealmSwift: 35d8d318b7e5a8dbc7096c2a243184e4d19abcc0
+  Sourcery: 56012f6689368ca6be2b7d862f49d88f35b83c9f
 
-PODFILE CHECKSUM: 3639b73ca3ce6af71b0c918c2a21006374849fd7
+PODFILE CHECKSUM: f83d6d09208c92193f30d05de5af60d72b5019b4
 
 COCOAPODS: 1.15.2
