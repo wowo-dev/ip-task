@@ -10,6 +10,7 @@
 		0ABB2A19C1443362ECFE34A7 /* Pods_InPost_Interview_Coding_TaskTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9D6C720825E15C8DB9CDFC0 /* Pods_InPost_Interview_Coding_TaskTests.framework */; };
 		8819B3AB2B81199D0040CD08 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 8819B3AA2B81199D0040CD08 /* Localizable.xcstrings */; };
 		8819B3AD2B811A330040CD08 /* String+Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8819B3AC2B811A330040CD08 /* String+Localizable.swift */; };
+		885279552B838844009D2969 /* InPostTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885279542B838844009D2969 /* InPostTests.swift */; };
 		8869D23E2B80AC9D000D2F29 /* View+Anchors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8869D23D2B80AC9D000D2F29 /* View+Anchors.swift */; };
 		8869D2422B80AE1D000D2F29 /* PackCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8869D2412B80AE1D000D2F29 /* PackCell.swift */; };
 		8869D2442B80AE78000D2F29 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8869D2432B80AE78000D2F29 /* TableViewCell.swift */; };
@@ -88,6 +89,7 @@
 		8819B3A52B8118FB0040CD08 /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		8819B3AA2B81199D0040CD08 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		8819B3AC2B811A330040CD08 /* String+Localizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Localizable.swift"; sourceTree = "<group>"; };
+		885279542B838844009D2969 /* InPostTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InPostTests.swift; sourceTree = "<group>"; };
 		8869D23D2B80AC9D000D2F29 /* View+Anchors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Anchors.swift"; sourceTree = "<group>"; };
 		8869D2412B80AE1D000D2F29 /* PackCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackCell.swift; sourceTree = "<group>"; };
 		8869D2432B80AE78000D2F29 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
@@ -179,6 +181,14 @@
 				8819B3AA2B81199D0040CD08 /* Localizable.xcstrings */,
 			);
 			path = Localization;
+			sourceTree = "<group>";
+		};
+		885279532B838808009D2969 /* InPost Interview Coding TaskUITests */ = {
+			isa = PBXGroup;
+			children = (
+				885279542B838844009D2969 /* InPostTests.swift */,
+			);
+			path = "InPost Interview Coding TaskUITests";
 			sourceTree = "<group>";
 		};
 		8869D23A2B80ABD5000D2F29 /* Utils */ = {
@@ -320,6 +330,7 @@
 			children = (
 				D671D9562913E528001FA9D5 /* InPost Interview Coding Task */,
 				D671D96D2913E529001FA9D5 /* InPost Interview Coding TaskTests */,
+				885279532B838808009D2969 /* InPost Interview Coding TaskUITests */,
 				D671D9552913E528001FA9D5 /* Products */,
 				A71A50FC3ACE229B9D6CDC43 /* Pods */,
 				913D9F73B32F33C130C9E20B /* Frameworks */,
@@ -523,6 +534,7 @@
 					};
 					D671D9732913E529001FA9D5 = {
 						CreatedOnToolsVersion = 14.1;
+						LastSwiftMigration = 1500;
 						TestTargetID = D671D9532913E528001FA9D5;
 					};
 				};
@@ -744,6 +756,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				885279552B838844009D2969 /* InPostTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1010,6 +1023,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 58AE36A9CE2AB8D6A8D303B3 /* Pods-InPost Interview Coding Task-InPost Interview Coding TaskUITests.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -1017,6 +1031,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "inpost.pl.InPost-Interview-Coding-TaskUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = "InPost Interview Coding Task";
@@ -1027,6 +1042,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = FE0ADA89C9F6B8ABEECD7623 /* Pods-InPost Interview Coding Task-InPost Interview Coding TaskUITests.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;

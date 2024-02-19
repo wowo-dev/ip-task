@@ -1,0 +1,37 @@
+{
+  "configurations" : [
+    {
+      "id" : "293A4BB9-F167-4348-A30A-DC1457A864F5",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:InPost Interview Coding Task.xcodeproj",
+      "identifier" : "D671D9532913E528001FA9D5",
+      "name" : "InPost Interview Coding Task"
+    }
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:InPost Interview Coding Task.xcodeproj",
+        "identifier" : "D671D9692913E529001FA9D5",
+        "name" : "InPost Interview Coding TaskTests"
+      }
+    },
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:InPost Interview Coding Task.xcodeproj",
+        "identifier" : "D671D9732913E529001FA9D5",
+        "name" : "InPost Interview Coding TaskUITests"
+      }
+    }
+  ],
+  "version" : 1
+}
