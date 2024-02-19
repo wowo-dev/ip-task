@@ -25,6 +25,8 @@
 		885279782B839D2B009D2969 /* PackNetworkingUITestsMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885279772B839D2B009D2969 /* PackNetworkingUITestsMock.swift */; };
 		8852797B2B83A223009D2969 /* SnapshotTesting in Frameworks */ = {isa = PBXBuildFile; productRef = 8852797A2B83A223009D2969 /* SnapshotTesting */; };
 		8852797E2B83A416009D2969 /* PackListControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8852797D2B83A416009D2969 /* PackListControllerTests.swift */; };
+		885279812B83AAE3009D2969 /* Pack+Comparable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885279802B83AAE3009D2969 /* Pack+Comparable.swift */; };
+		885279832B83ABDF009D2969 /* PackComparableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885279822B83ABDF009D2969 /* PackComparableTests.swift */; };
 		8869D23E2B80AC9D000D2F29 /* View+Anchors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8869D23D2B80AC9D000D2F29 /* View+Anchors.swift */; };
 		8869D2422B80AE1D000D2F29 /* PackCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8869D2412B80AE1D000D2F29 /* PackCell.swift */; };
 		8869D2442B80AE78000D2F29 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8869D2432B80AE78000D2F29 /* TableViewCell.swift */; };
@@ -116,6 +118,8 @@
 		885279742B839CF8009D2969 /* Container+UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Container+UITests.swift"; sourceTree = "<group>"; };
 		885279772B839D2B009D2969 /* PackNetworkingUITestsMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackNetworkingUITestsMock.swift; sourceTree = "<group>"; };
 		8852797D2B83A416009D2969 /* PackListControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackListControllerTests.swift; sourceTree = "<group>"; };
+		885279802B83AAE3009D2969 /* Pack+Comparable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Pack+Comparable.swift"; sourceTree = "<group>"; };
+		885279822B83ABDF009D2969 /* PackComparableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackComparableTests.swift; sourceTree = "<group>"; };
 		8869D23D2B80AC9D000D2F29 /* View+Anchors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Anchors.swift"; sourceTree = "<group>"; };
 		8869D2412B80AE1D000D2F29 /* PackCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackCell.swift; sourceTree = "<group>"; };
 		8869D2432B80AE78000D2F29 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
@@ -258,6 +262,7 @@
 			children = (
 				885279672B8398F5009D2969 /* PackStatusTests.swift */,
 				885279692B8399D0009D2969 /* OptionalElementTests.swift */,
+				885279822B83ABDF009D2969 /* PackComparableTests.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -302,6 +307,17 @@
 				8852797D2B83A416009D2969 /* PackListControllerTests.swift */,
 			);
 			path = Snapshots;
+			sourceTree = "<group>";
+		};
+		8852797F2B83AAC5009D2969 /* Pack */ = {
+			isa = PBXGroup;
+			children = (
+				D671D98E2913F2A1001FA9D5 /* Pack.swift */,
+				8869D2472B80B6D0000D2F29 /* Pack+Status.swift */,
+				8869D25D2B80CEC0000D2F29 /* Pack+ShipmentType.swift */,
+				885279802B83AAE3009D2969 /* Pack+Comparable.swift */,
+			);
+			path = Pack;
 			sourceTree = "<group>";
 		};
 		8869D23A2B80ABD5000D2F29 /* Utils */ = {
@@ -533,9 +549,7 @@
 		D671D98D2913F297001FA9D5 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				D671D98E2913F2A1001FA9D5 /* Pack.swift */,
-				8869D2472B80B6D0000D2F29 /* Pack+Status.swift */,
-				8869D25D2B80CEC0000D2F29 /* Pack+ShipmentType.swift */,
+				8852797F2B83AAC5009D2969 /* Pack */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -852,6 +866,7 @@
 				8869D24D2B80BCBD000D2F29 /* PackListModels.swift in Sources */,
 				D671D9582913E528001FA9D5 /* AppDelegate.swift in Sources */,
 				8869D27C2B80FAB8000D2F29 /* Typography.swift in Sources */,
+				885279812B83AAE3009D2969 /* Pack+Comparable.swift in Sources */,
 				8869D26C2B80F923000D2F29 /* UIColor+Palette.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -863,6 +878,7 @@
 				885279682B8398F5009D2969 /* PackStatusTests.swift in Sources */,
 				8852795E2B838D10009D2969 /* PackModelMapperImplTests.swift in Sources */,
 				8852797E2B83A416009D2969 /* PackListControllerTests.swift in Sources */,
+				885279832B83ABDF009D2969 /* PackComparableTests.swift in Sources */,
 				885279652B83941F009D2969 /* PackListViewModelTests.swift in Sources */,
 				8852796A2B8399D0009D2969 /* OptionalElementTests.swift in Sources */,
 				8852795B2B838C10009D2969 /* Difference.swift in Sources */,

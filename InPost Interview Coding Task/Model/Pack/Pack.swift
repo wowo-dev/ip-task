@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Pack: Codable {
+struct Pack: Codable, Equatable {
     let id: String
     let status: Status
     let sender: String

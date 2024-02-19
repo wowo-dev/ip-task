@@ -47,7 +47,7 @@ private extension PackListViewModel {
                 $0.key.order < $1.key.order
             })
             .map {
-                .init(title: $0.key.title, packs: packMapper.map(packs: $0.value))
+                .init(title: $0.key.title, packs: packMapper.map(packs: $0.value.sorted(by: <)))
             }
     }
 }
