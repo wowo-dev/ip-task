@@ -11,6 +11,8 @@
 		8819B3AB2B81199D0040CD08 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 8819B3AA2B81199D0040CD08 /* Localizable.xcstrings */; };
 		8819B3AD2B811A330040CD08 /* String+Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8819B3AC2B811A330040CD08 /* String+Localizable.swift */; };
 		885279552B838844009D2969 /* InPostTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885279542B838844009D2969 /* InPostTests.swift */; };
+		885279582B838BC0009D2969 /* Difference in Frameworks */ = {isa = PBXBuildFile; productRef = 885279572B838BC0009D2969 /* Difference */; };
+		8852795B2B838C10009D2969 /* Difference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8852795A2B838C10009D2969 /* Difference.swift */; };
 		8869D23E2B80AC9D000D2F29 /* View+Anchors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8869D23D2B80AC9D000D2F29 /* View+Anchors.swift */; };
 		8869D2422B80AE1D000D2F29 /* PackCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8869D2412B80AE1D000D2F29 /* PackCell.swift */; };
 		8869D2442B80AE78000D2F29 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8869D2432B80AE78000D2F29 /* TableViewCell.swift */; };
@@ -90,6 +92,7 @@
 		8819B3AA2B81199D0040CD08 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		8819B3AC2B811A330040CD08 /* String+Localizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Localizable.swift"; sourceTree = "<group>"; };
 		885279542B838844009D2969 /* InPostTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InPostTests.swift; sourceTree = "<group>"; };
+		8852795A2B838C10009D2969 /* Difference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Difference.swift; sourceTree = "<group>"; };
 		8869D23D2B80AC9D000D2F29 /* View+Anchors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Anchors.swift"; sourceTree = "<group>"; };
 		8869D2412B80AE1D000D2F29 /* PackCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackCell.swift; sourceTree = "<group>"; };
 		8869D2432B80AE78000D2F29 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
@@ -161,6 +164,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0ABB2A19C1443362ECFE34A7 /* Pods_InPost_Interview_Coding_TaskTests.framework in Frameworks */,
+				885279582B838BC0009D2969 /* Difference in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -189,6 +193,14 @@
 				885279542B838844009D2969 /* InPostTests.swift */,
 			);
 			path = "InPost Interview Coding TaskUITests";
+			sourceTree = "<group>";
+		};
+		885279592B838C03009D2969 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				8852795A2B838C10009D2969 /* Difference.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		8869D23A2B80ABD5000D2F29 /* Utils */ = {
@@ -364,6 +376,7 @@
 		D671D96D2913E529001FA9D5 /* InPost Interview Coding TaskTests */ = {
 			isa = PBXGroup;
 			children = (
+				885279592B838C03009D2969 /* Utils */,
 				D671D96E2913E529001FA9D5 /* InPostTests.swift */,
 			);
 			path = "InPost Interview Coding TaskTests";
@@ -491,6 +504,9 @@
 				D671D96C2913E529001FA9D5 /* PBXTargetDependency */,
 			);
 			name = "InPost Interview Coding TaskTests";
+			packageProductDependencies = (
+				885279572B838BC0009D2969 /* Difference */,
+			);
 			productName = "InPost Interview Coding TaskTests";
 			productReference = D671D96A2913E529001FA9D5 /* InPost Interview Coding TaskTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -551,6 +567,7 @@
 			packageReferences = (
 				8869D24E2B80BDF5000D2F29 /* XCRemoteSwiftPackageReference "swift-collections" */,
 				8869D2512B80C3F7000D2F29 /* XCRemoteSwiftPackageReference "Factory" */,
+				885279562B838BC0009D2969 /* XCRemoteSwiftPackageReference "Difference" */,
 			);
 			productRefGroup = D671D9552913E528001FA9D5 /* Products */;
 			projectDirPath = "";
@@ -748,6 +765,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8852795B2B838C10009D2969 /* Difference.swift in Sources */,
 				D671D96F2913E529001FA9D5 /* InPostTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1098,6 +1116,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		885279562B838BC0009D2969 /* XCRemoteSwiftPackageReference "Difference" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/krzysztofzablocki/Difference.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.2;
+			};
+		};
 		8869D24E2B80BDF5000D2F29 /* XCRemoteSwiftPackageReference "swift-collections" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/apple/swift-collections.git";
@@ -1117,6 +1143,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		885279572B838BC0009D2969 /* Difference */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 885279562B838BC0009D2969 /* XCRemoteSwiftPackageReference "Difference" */;
+			productName = Difference;
+		};
 		8869D24F2B80BDF5000D2F29 /* Collections */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 8869D24E2B80BDF5000D2F29 /* XCRemoteSwiftPackageReference "swift-collections" */;
