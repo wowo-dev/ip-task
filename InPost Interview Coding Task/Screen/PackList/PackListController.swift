@@ -76,6 +76,7 @@ private extension PackListController {
 
     func setupEmptyStateView() {
         view.addSubview(emptyStateView)
+        emptyStateView.isHidden = true
         emptyStateView.set(title: "pack_list_empty_title".localized)
         emptyStateView.activate(
             emptyStateView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
@@ -86,6 +87,7 @@ private extension PackListController {
 
     func setupErrorStateView() {
         view.addSubview(errorStateView)
+        errorStateView.isHidden = true
         errorStateView.set(title: "pack_list_error_title".localized)
         errorStateView.activate(
             errorStateView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
