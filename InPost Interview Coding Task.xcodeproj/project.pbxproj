@@ -24,6 +24,7 @@
 		885279752B839CF8009D2969 /* Container+UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885279742B839CF8009D2969 /* Container+UITests.swift */; };
 		885279782B839D2B009D2969 /* PackNetworkingUITestsMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885279772B839D2B009D2969 /* PackNetworkingUITestsMock.swift */; };
 		8852797B2B83A223009D2969 /* SnapshotTesting in Frameworks */ = {isa = PBXBuildFile; productRef = 8852797A2B83A223009D2969 /* SnapshotTesting */; };
+		8852797E2B83A416009D2969 /* PackListControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8852797D2B83A416009D2969 /* PackListControllerTests.swift */; };
 		8869D23E2B80AC9D000D2F29 /* View+Anchors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8869D23D2B80AC9D000D2F29 /* View+Anchors.swift */; };
 		8869D2422B80AE1D000D2F29 /* PackCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8869D2412B80AE1D000D2F29 /* PackCell.swift */; };
 		8869D2442B80AE78000D2F29 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8869D2432B80AE78000D2F29 /* TableViewCell.swift */; };
@@ -114,6 +115,7 @@
 		885279712B839C22009D2969 /* PackListControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackListControllerTests.swift; sourceTree = "<group>"; };
 		885279742B839CF8009D2969 /* Container+UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Container+UITests.swift"; sourceTree = "<group>"; };
 		885279772B839D2B009D2969 /* PackNetworkingUITestsMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackNetworkingUITestsMock.swift; sourceTree = "<group>"; };
+		8852797D2B83A416009D2969 /* PackListControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackListControllerTests.swift; sourceTree = "<group>"; };
 		8869D23D2B80AC9D000D2F29 /* View+Anchors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Anchors.swift"; sourceTree = "<group>"; };
 		8869D2412B80AE1D000D2F29 /* PackCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackCell.swift; sourceTree = "<group>"; };
 		8869D2432B80AE78000D2F29 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
@@ -294,6 +296,14 @@
 			path = UITestsMocks;
 			sourceTree = "<group>";
 		};
+		8852797C2B83A3E0009D2969 /* Snapshots */ = {
+			isa = PBXGroup;
+			children = (
+				8852797D2B83A416009D2969 /* PackListControllerTests.swift */,
+			);
+			path = Snapshots;
+			sourceTree = "<group>";
+		};
 		8869D23A2B80ABD5000D2F29 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
@@ -471,6 +481,7 @@
 				885279632B839408009D2969 /* Screen */,
 				8852795C2B838CDE009D2969 /* Dependencies */,
 				885279662B8398DE009D2969 /* Models */,
+				8852797C2B83A3E0009D2969 /* Snapshots */,
 				885279602B839300009D2969 /* Mocks */,
 				885279592B838C03009D2969 /* Utils */,
 				D671D96E2913E529001FA9D5 /* InPostTests.swift */,
@@ -851,6 +862,7 @@
 			files = (
 				885279682B8398F5009D2969 /* PackStatusTests.swift in Sources */,
 				8852795E2B838D10009D2969 /* PackModelMapperImplTests.swift in Sources */,
+				8852797E2B83A416009D2969 /* PackListControllerTests.swift in Sources */,
 				885279652B83941F009D2969 /* PackListViewModelTests.swift in Sources */,
 				8852796A2B8399D0009D2969 /* OptionalElementTests.swift in Sources */,
 				8852795B2B838C10009D2969 /* Difference.swift in Sources */,
