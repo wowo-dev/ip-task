@@ -16,29 +16,27 @@ final class PackListViewModel {
     @Published private(set) var state = PackListState.loading
     @Published private(set) var sections = [PackListSection]()
 
-    func fetchPacks() {
-        Task {
-            do {
-                let packs = try await packNetworking.getPacks()
+    func fetchPacks() async {
+        do {
+            let packs = try await packNetworking.getPacks()
 
-                guard !packs.isEmpty else {
-                    sections = []
-                    state = .empty
-                    return
-                }
-
-                sections = createSections(from: packs)
-                state = .list
-            } catch {
+            guard !packs.isEmpty else {
                 sections = []
-                state = .error
+                state = .empty
+                return
             }
+
+            sections = createSections(from: packs)
+            state = .list
+        } catch {
+            sections = []
+            state = .error
         }
     }
 
-    func retryFetchPack() {
+    func retryFetchPack() async {
         state = .loading
-        fetchPacks()
+        await fetchPacks()
     }
 }
 

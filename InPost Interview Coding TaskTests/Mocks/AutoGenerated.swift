@@ -35,3 +35,32 @@ import AppKit
 
 
 
+class PackNetworkingMock: PackNetworking {
+
+
+
+
+    //MARK: - getPacks
+
+    var getPacksPackThrowableError: (any Error)?
+    var getPacksPackCallsCount = 0
+    var getPacksPackCalled: Bool {
+        return getPacksPackCallsCount > 0
+    }
+    var getPacksPackReturnValue: [Pack]!
+    var getPacksPackClosure: (() async throws -> [Pack])?
+
+    func getPacks() async throws -> [Pack] {
+        getPacksPackCallsCount += 1
+        if let error = getPacksPackThrowableError {
+            throw error
+        }
+        if let getPacksPackClosure = getPacksPackClosure {
+            return try await getPacksPackClosure()
+        } else {
+            return getPacksPackReturnValue
+        }
+    }
+
+
+}

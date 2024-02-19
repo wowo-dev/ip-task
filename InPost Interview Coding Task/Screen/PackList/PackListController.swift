@@ -135,12 +135,16 @@ private extension PackListController {
 private extension PackListController {
     @objc
     func loadPacks() {
-        viewModel.fetchPacks()
+        Task {
+            await viewModel.fetchPacks()
+        }
     }
 
     @objc
     func retryLoadPacks() {
-        viewModel.retryFetchPack()
+        Task {
+            await viewModel.retryFetchPack()
+        }
     }
 }
 

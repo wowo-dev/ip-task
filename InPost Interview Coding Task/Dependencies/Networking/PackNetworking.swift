@@ -7,6 +7,7 @@
 
 import Foundation
 
+// sourcery: AutoMockable
 protocol PackNetworking: AnyObject {
     func getPacks() async throws -> [Pack]
 }
