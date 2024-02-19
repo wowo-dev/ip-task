@@ -248,6 +248,18 @@ final class PackModelMapperImplTests: XCTestCase {
         XCTAssertEqual(expected, result)
     }
 
+    func test_shipmentIconMapping() {
+        let packs = Pack.ShipmentType.allCases.map {
+            samplePack(.delivered, shipmentType: $0)
+        }
+
+        let sut = PackModelMapperImpl()
+        let result = sut.map(packs: packs)
+
+        XCTAssertEqual(result[0].shipmentIconName, "shipment_parcel_locker")
+        XCTAssertEqual(result[1].shipmentIconName, "shipment_courier")
+    }
+
     // MARK: - Helpers
 
     func samplePack(

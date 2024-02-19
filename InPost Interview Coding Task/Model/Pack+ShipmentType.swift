@@ -8,7 +8,7 @@
 import Foundation
 
 extension Pack {
-    enum ShipmentType: String, Codable {
+    enum ShipmentType: String, Codable, CaseIterable {
         case parcelLocker = "PARCEL_LOCKER"
         case courier = "COURIER"
     }
