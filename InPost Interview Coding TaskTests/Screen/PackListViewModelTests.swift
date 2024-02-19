@@ -84,6 +84,69 @@ final class PackListViewModelTests: XCTestCase {
         XCTAssertEqual(states[1], .list)
     }
 
+    // MARK: - Sections
+
+    func test_sections_beforeDataFetch_areEmpty() throws {
+        let sut = PackListViewModel()
+
+        XCTAssertEqual(sut.sections.count, 0)
+    }
+
+    func test_sections_withEmptyData_areEmpty() async throws {
+        networkingMock.getPacksPackReturnValue = []
+
+        let sut = PackListViewModel()
+        await sut.fetchPacks()
+
+        XCTAssertEqual(sut.sections.count, 0)
+    }
+
+    func test_sections_withNetworkError_areEmpty() async throws {
+        networkingMock.getPacksPackThrowableError = NSError(domain: "", code: 0)
+
+        let sut = PackListViewModel()
+        await sut.fetchPacks()
+
+        XCTAssertEqual(sut.sections.count, 0)
+    }
+
+    func test_sectionTitles_forAllPackGroups_areCorrectAndInOrder() async throws {
+        networkingMock.getPacksPackReturnValue = Pack.Status.allCases.map { samplePack($0) }
+
+        let sut = PackListViewModel()
+        await sut.fetchPacks()
+
+        XCTAssertEqual(sut.sections.count, 2)
+        XCTAssertEqual(sut.sections[0].title, "Gotowe do odbioru")
+        XCTAssertEqual(sut.sections[1].title, "Pozostałe")
+    }
+
+    func test_packsGrouping_forAllPackStatuses() async throws {
+        networkingMock.getPacksPackReturnValue = Pack.Status.allCases.map { samplePack($0) }
+
+        let sut = PackListViewModel()
+        await sut.fetchPacks()
+
+        XCTAssertEqual(sut.sections.count, 2)
+
+        XCTAssertEqual(sut.sections[0].packs.count, 2)
+        XCTAssertEqual(sut.sections[0].packs[0].status, "Wydana do doręczenia")
+        XCTAssertEqual(sut.sections[0].packs[1].status, "Gotowa do odbioru")
+
+        XCTAssertEqual(sut.sections[1].packs.count, 11)
+        XCTAssertEqual(sut.sections[1].packs[0].status, "W trakcie przygotowania")
+        XCTAssertEqual(sut.sections[1].packs[1].status, "Nadana")
+        XCTAssertEqual(sut.sections[1].packs[2].status, "Przyjęta w oddziale")
+        XCTAssertEqual(sut.sections[1].packs[3].status, "Wysłana z oddziału")
+        XCTAssertEqual(sut.sections[1].packs[4].status, "Przyjęta w sortowni")
+        XCTAssertEqual(sut.sections[1].packs[5].status, "Wysłana z sortowni")
+        XCTAssertEqual(sut.sections[1].packs[6].status, "Inny")
+        XCTAssertEqual(sut.sections[1].packs[7].status, "Odebrana")
+        XCTAssertEqual(sut.sections[1].packs[8].status, "Zwrócona do nadawcy")
+        XCTAssertEqual(sut.sections[1].packs[9].status, "Awizo")
+        XCTAssertEqual(sut.sections[1].packs[10].status, "Upłynął termin odbioru")
+    }
+
     // MARK: - Helpers
 
     func samplePack(
