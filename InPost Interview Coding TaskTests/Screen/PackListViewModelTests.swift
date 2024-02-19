@@ -58,6 +58,32 @@ final class PackListViewModelTests: XCTestCase {
         XCTAssertEqual(sut.state, .list)
     }
 
+    func test_state_forFetchRetry_changesToLoadingThenList() async {
+        networkingMock.getPacksPackReturnValue = [
+            samplePack(.delivered)
+        ]
+
+        let sut = PackListViewModel()
+        let expectation = XCTestExpectation(description: "Status changed to `.list`")
+        var states = [PackListState]()
+
+        sut.$state
+            .dropFirst()
+            .sink { state in
+                states.append(state)
+                if state == .list {
+                    expectation.fulfill()
+                }
+            }
+            .store(in: &subscribers)
+
+        await sut.retryFetchPack()
+        await fulfillment(of: [expectation])
+
+        XCTAssertEqual(states[0], .loading)
+        XCTAssertEqual(states[1], .list)
+    }
+
     // MARK: - Helpers
 
     func samplePack(
