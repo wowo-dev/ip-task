@@ -18,10 +18,11 @@ extension Pack: Comparable {
         ]
 
         for comparator in comparators {
-            if !comparator(lhs, rhs) && !comparator(rhs, lhs) {
+            let lhsRhsComparisonResult = comparator(lhs, rhs)
+            if !lhsRhsComparisonResult && !comparator(rhs, lhs) {
                 continue
             }
-            return comparator(lhs, rhs)
+            return lhsRhsComparisonResult
         }
 
         return false
