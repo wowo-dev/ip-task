@@ -34,6 +34,18 @@ final class PackListControllerTest: XCTestCase {
         assertSnapshot(of: vc, as: .image, record: false)
     }
 
+    func test_packList_listState() async throws {
+        let date = Date(timeIntervalSince1970: 0)
+        networkingMock.getPacksPackReturnValue = [
+            Pack(id: "1", status: .outForDelivery, sender: "Sender", expiryDate: nil, pickupDate: nil, storedDate: nil, shipmentType: .courier),
+            Pack(id: "2", status: .readyToPickup, sender: "Sender", expiryDate: date, pickupDate: nil, storedDate: nil, shipmentType: .parcelLocker),
+            Pack(id: "3", status: .delivered, sender: "Sender", expiryDate: nil, pickupDate: date, storedDate: nil, shipmentType: .parcelLocker),
+        ]
+
+        let vc = try await createVC()
+        assertSnapshot(of: vc, as: .image, record: false)
+    }
+
     // MARK: - Helpers
 
     func createVC() async throws -> UIViewController {
